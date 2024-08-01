@@ -1,0 +1,19 @@
+minFn(array){
+	mid = array.length/2
+	lft = array[mid-1]
+	rht = array[mid+1]
+
+	if{lft < mid < rht){
+		newArr = array.subArray(0,mid)
+		minFn(newArr)
+	}else if(lft > mid > rht){
+		newArr = array.subArray(mid, array.length)
+		minFn(newArr)
+	}else{}
+	return mid
+}
+
+
+
+
+--Andrew Kalathra, 2024
