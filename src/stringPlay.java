@@ -1,0 +1,26 @@
+//**********************************
+// COSC 1336 CS Fund 1
+// Name: Andrew Kalathra
+// Data: 9/21/2021
+// play with string objects
+//**********************************
+
+public class stringPlay {
+
+	public static void main(String[] args) {
+		
+		String college = new String ("PoDunk College");
+		String town = ("Anytown, USA"); // part (a)
+		int stringLength;
+		String change1, change2, change3;
+		stringLength = college.length() ; // part (b)
+		System.out.println (college + " contains " + stringLength +
+		" characters.");
+		change1 = college.toUpperCase(); // part (c)
+		change2 = college.replace("O", "*"); // part (d)
+		change3 = college.concat(town); // part (e)
+		System.out.println ("The final string is " + change3);
+		
+	}
+
+}
