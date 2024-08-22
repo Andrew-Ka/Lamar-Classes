@@ -1,0 +1,6 @@
+Go to repo labelled "Cyber-Security-Projects"
+This contains our first Cyber security project, which was for a file recovery system using clusters in the FAT table (file access table table, I love English).
+
+A homework that was noteworthy was copying e Lamar Webpage (HW 3)
+
+The Final project was using SQL and other injections to modify a database

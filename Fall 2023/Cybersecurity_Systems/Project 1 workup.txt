@@ -1,0 +1,145 @@
+main{
+	get FAT;
+	get Root;
+
+	make 1 stack for all files from the Root;
+	turn each of FAT cluster into ArraySize if in stack;
+	parse remaining FAT array, if number != ArraySize found, add to new list
+	read from FAT and work backwards, from 0 to last cluster; 
+}
+
+or
+
+main{
+	get FAT;
+	get Root;
+	make string with pos;
+	arrange pos in string via array, 0's in back, others following pattern
+	while(still files in root){
+		lister Root file 1;
+		remove each part of list from array;
+	} 
+	should be left with just the deleted file ones, in the right order;
+}
+lister list(file file1){
+	make list of follow things;
+	return list
+}
+
+or
+
+main{
+	get FAT;//int[][]
+	get Root;//int[]
+	
+	Stack<Integer> organized = ArrangeFat(FAT);
+	//this stack should have the FAT positions grouped in a stack
+	//so that when going through the array again, can tell which one 
+	//group hasn't been used, can tell groups by when getting to a 0
+	//bc 0's will be at bottom of the stack
+	
+	for(# of Root elements){
+		if(cluster starting pos != any of the Root elements){
+			break;
+			//at this point, the missing document's pos
+			//should be at the top of the stack
+		}else{
+			while(cluster part != 0){
+				organized.pop();
+			}
+		}
+	}
+
+	int u = 0;
+	while (i != -1){
+		u = -1;
+		for(i;<Root.size; i++){
+			if(organized.peek() == Root[i]){
+				u = i;
+				break;
+			}
+		}
+		if(u != -1){
+			int b = organized.pop();
+			while(//somehow check if what was at B on the FAT was 0
+		}
+	}
+	
+
+
+	String answer = "";
+	while(cluster part != 0){
+		answer+= organized.pop().toString();
+	}
+	print answer;
+	
+}
+public static Stack<Integer> ArrangeFat(int[][] x){
+	make Stack<Integer> result;
+	make ArrayList<Integer> holder; //set size for faster run
+	//assign all the 0th row of x to holder
+	for(i=0; i<x.size; i++){
+		holder.add(x[0][i]);
+	}
+
+		
+
+	int i = findThisInt(0, holder, x);
+	int k = holder.indexOf(i);
+	int holdK;
+	while(k != -1){
+		result.add(k);
+		holder.set(i,-1);
+		//this will set the certain element in the holder
+		//to -1, so its never used again, but still holds
+		//the same position, which we need to use to get 
+		//info from x
+		
+		
+		holdK = k;
+		for(t;x.size;t++){
+			if(k==x[1][t]){
+				i=t;
+				k=x[0][t];
+				break;
+			}	
+		}
+		if(k == holdK){
+			i = findThisInt(0, holder, x);
+			k = holder.indexOf(i);
+		}
+		
+	}
+	return result;
+
+}
+public static int findThisInt(int b, ArrayList<Integer> holder, int[][] x){
+	for(int j=0; j<x.length; j++){
+		if((holder.indexOf(j) != -1) && (x[1][j] == b)){
+			return holder.indexOf(j);
+		}
+	}
+	return -1;
+}
+
+
+
+//trash
+	ArrayList<Integer> newX= x; //convert x into an ArrayList
+	Stack<Integer> hold = new Stack<Integer>;//make a stack
+
+	//start by moving any starting 0's to bottom of list
+	if(start not start w/ 0){
+		make first in newX 0 as 
+	}put first numb on bottom of stack;
+		check if any of 2nd numb are same as the first numb;
+		remove the first numb from arraylist;
+	
+}
+//holdClust = x[0][i]; this is just k
+	
+		//k = holder.indexOf(holdClust);
+		/*if(k == -1){
+			i = findThisInt(0, holder, x);
+			k = holder.indexOf(i);
+		}*/

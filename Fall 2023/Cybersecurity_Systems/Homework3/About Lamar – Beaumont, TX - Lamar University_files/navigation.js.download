@@ -1,0 +1,8 @@
+$(document).ready(function() {
+    $(document).on('click', '.folder div', function(e){
+		$(this).find(".toggler").toggleClass("closed");
+        $(this).find("span").toggleClass("closed");   
+        $(this).siblings("ul").slideToggle("slow");
+        $(this).parent(".folder").toggleClass("closed");
+	})
+});

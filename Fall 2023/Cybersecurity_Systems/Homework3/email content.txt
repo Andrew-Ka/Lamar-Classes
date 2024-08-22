@@ -1,0 +1,10 @@
+Dear Students,
+
+Due to a Distributed Denial of Service (DDoS) attack this afternoon, University websites, Gmail, and other systems were down from approximately 2 to 3:30 pm.
+
+As soon as the event was detected, ITS took immediate steps to stop the attack and restore services. We realize some students were unable to register for spring semester classes during this time. All systems are restored and functioning smoothly now; we sincerely apologize for any issues this may have caused.
+
+For any further questions, please contact the IT Service Desk at 409-880-2222 or https://www.lamar.edu/it-services-and-support/index.html
+
+Thank you,
+Shelly

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Lamar';
+	src: url('//www.lamar.edu/_files/css/fonts/LamarBold.eot');
+	src: url('//www.lamar.edu/_files/css/fonts/LamarBold.eot?#iefix') format('embedded-opentype'),
+		url('//www.lamar.edu/_files/css/fonts/LamarBold.woff2') format('woff2'),
+		url('//www.lamar.edu/_files/css/fonts/LamarBold.woff') format('woff'),
+        url('//www.lamar.edu/_files/css/fonts/LamarBold.svg#Lamar') format('svg'),
+		url('//www.lamar.edu/_files/css/fonts/LamarBold.ttf') format('truetype');
+}
