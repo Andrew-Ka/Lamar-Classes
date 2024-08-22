@@ -1,0 +1,45 @@
+Prompt(s):
+Write about your favorite technique in the discussion thread focusing on advantages and disadvantages of the chosen method of microbial identification by 1/28/24 11;59 pm
+Microbial detection method: advantages and disadvantages: Pick a method that you like, and give example of a pathogen this method would work for, and state what it does, how it works, its advantages and disadvantages, 
+
+
+Ideas:
+Branched Chain DNA Assay
+Use the NIH one for example
+Broadly explain it, and talk abt viruses/detection
+Talk abt how it works, adv/dis
+Keywords:
+plasma, cDNA (is short), artificially, antibody capture solution hybridization, RNA:DNA, ELISA
+
+
+My Response:
+
+Branched Chain DNA Assay is an interesting technique due to its similarities to PCR and RT-PCR. 
+
+In brief, PCR and RT-PCR utilize the general polymerase chain reaction (PCR) to amplify a copy of DNA. The process involves splitting the DNA, using primers (that are complementary) with an excess of nucleotides, allowing for the generation of the same DNA sequence exponentially [4]. The only difference between the two is the usage of reverse transcriptase prior to the PCR process, which converts mRNA (or viral RNA) to DNA. 
+
+Along the same vein of detecting "small amounts of specific RNA or DNA sequences" comes branched-chain DNA assay, an alternative to both PCR and RT-PCR [4]. The process is also known as the "sandwich nucleic acid hybridization method" due to the localization of the sequence of interest between "target-specific nucleotides" [2]. Without needing to isolate, purify, or amplify RNA/DNA prior to the assay, bDNA (branched DNA) can be taken from virtually any source. Starting by lysing the target sequence allows analysis to proceed. Next, two extenders (the 'capture' and 'label' extenders, both are cDNA) are added to the well alongside the target sequence. The capture extender 'sticks' to the bottom of the well (alternatively, beads could be used) while the label extender hybridizes to one side of the target sequence. In this sense, a 'sandwich' is made between the two extenders with the middle containing the target sequence [2]. Pre-amplifier is then added to the well, followed by an amplifier, and then the label probe. Each layer connects to the one above, creating a "signal tree" [2]. The label probe is made of AP-labelled oligonucleotides (alkaline phosphate) which "emits a chemiluminescence signal that is proportional to the amount of target sequence in the sample". In essence, the target sequence can be amplified through signals emitted upon binding. "The antibody capture solution hybridization assay detects and quantitates RNA: DNA hybrids using an antibody specific for the complex in a technique similar to ELISA". Other applications (outside of just viral material) would be microarray validation and biomarker discovery.
+
+A pathogen this technique works on is HIV (Human Immunodeficiency Virus) and HCV (Hepatitis C Virus). In this example, isolated HVC (or HIV) DNA/RNA will be added following the above steps, using the nucleotide sequence as the target sequence [3]. Using a research paper provided by the NIH, the RNA can be extracted from frozen tissue and isolated using Trizol (Invitrogen) [3]. Following this, the aqueous solution was purified and precipitated, leaving behind an eluted RNA sample [3]. 
+
+The pros of this method include its simplicity in obtaining a sample. No prior work is needed to prepare the sample other than the lysing step. 
+
+The cons of the method are obvious. Unlike RT-PCR, this method requires significantly more time. RT-PCR is common to see in research as it is more adaptable, unlike branched Chain DNA assays [2]. 
+
+
+
+
+
+
+
+References:
+
+
+
+[1] 	BMH Learning, director. Branched DNA Assay | bDNA Assay | Single Plex Assays | Multiplex Assays |. YouTube, YouTube, 20 Nov. 2021, https://www.youtube.com/watch?v=k_t3rHTnEqg. Accessed 28 Jan. 2024. 
+
+[2] 	Faqi, Ali S., and Ali S. Faqi. “Toxicogenomics in Preclinical Development.” A Comprehensive Guide to Toxicology in Preclinical Drug Development, Elsevier, Amsterdam, 2013, pp. 835–836. 
+
+[3] 	Knudsen, Beatrice S, et al. “Evaluation of the Branched-Chain DNA Assay for Measurement of RNA in Formalin-Fixed Tissues.” The Journal of Molecular Diagnostics : JMD, U.S. National Library of Medicine, Mar. 2008, www.ncbi.nlm.nih.gov/pmc/articles/PMC2259472/. 
+
+[4] 	Murray, Patrick R., et al. “Chapter 5 - Molecular Diagnosis.” Medical Microbiology, Elsevier, Philadelphia, PA, 2016, pp. 23–25. 
