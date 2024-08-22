@@ -1,0 +1,72 @@
+We got another hw, due on thursday (4/4/24)
+3 Q's
+	1. Can be done recursively, can be done w/ LCS method, can also use other dynamic pgrming approach (similar to LCS)
+
+my g is dying he needs a break bruh
+
+
+Last Time:
+
+Greedy
+	don't worry abt future steps, just now
+	fractional knapsack prob
+	
+
+
+Now:
+
+Second ex of Greedy: Huffman codes
+	its seen in image compression, lots of data, even video
+	small plug for the class
+	String, frequency is diff for each letter in the string
+		Ex: 6 letters, use 3 bits
+		use frequency * bits needed (add for all the letters and frequencies)
+		 = tot space
+		this is fixed-
+	Lots of space, but there is better way
+	better way: higher frequency, lower bits used
+		this is called variable-length code
+	comparing these two, we got a compression ratio
+	
+	Use huffman tree to make huffman code to then make it ez to find
+	huffman coding, encoding and decoding
+Exs
+	pseudocode: 
+		got a for loop, make a tree
+		left and right subtree, adding them, insert
+	
+	order letters in increasing frequencies (lowest to highest)
+	add 2 lowest nodes (first two elements), add their frequencies
+	reorder with new frequencies************* (this comes after every merge)
+	merge two lowest
+	keep going until added all, essentially making a tree
+	huffman tree
+now huffman code
+	start from root
+	if go left, then go 0, if right then go 1
+	traverse all the way to leaf nodes
+greedy bc we select smallest frequency, every iteration
+he really is not doing great, he needs a cough drop or smth
+did an example together, ez encode -> decode
+	make sure u reorder EVERY SINGLE TIME
+
+
+LAST TOPIC!!!!! 
+Graphs
+We will learn:
+	what a graph is is
+	vertex, edge/link (the lines that connect the vertices)
+	Gr = (E, V)
+	not standard data strucutre, so have to convert it to one
+	sometimes, we got directed graphs, only 1 vertices to another, not backwards
+	sometimes have weight to them
+	have input (Graph), how to show it
+	min spanning tree (MST) where weight is minimized
+	shortest path
+	some application for vision processing: VISION PROCESSING IS A CLASS lol
+
+
+
+
+
+

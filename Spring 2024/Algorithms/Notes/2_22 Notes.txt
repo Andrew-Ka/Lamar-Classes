@@ -1,0 +1,91 @@
+midterm in 1 week
+
+HW 6 due on tuesday
+	4q, all data structure
+	fixed size full array, insertion
+	removing node from doubly linked list
+	worst time complexity for insertion into an array
+	3 methods for hash table, do insertion for keys using them
+
+HW 4
+	merge sort is divide and conquer, nlogn
+	heap sort, input and output are both arrays
+		need to know how to make heap, max heap, then do heap sort
+	quicksort is also based on divide and conquer
+need to know for test: merge sort, heap sort, quick sort
+
+b4:
+
+hash table
+	need bc O(1) time, super fast, instead of things like linear time
+	one way is save index of every key, but we got way too many keys then, too much mem
+	hash fn is easier way, plug in key, gives hash value (index) that can be the address of the element
+	possibility of collisions, can be overcome by 
+		chaining (not great, results in linked list, which is O(n) time)
+			load factor, alpha=n/m, how many elements in each slot of table
+		linear probing (a bit better, but makes primary clusters)
+		queadratic probing (better, but makes secondary clusters)
+		double hashing (best, 2 hash fns, work together, incremenent independent of the keys)
+			use mod, and need to know how to do PEMDAS with mod (it goes with the mult,div part
+			only use secondary hash fn if collision
+	open addressing
+
+
+now:
+
+binary search tree
+	heap = complete binary tree
+	binary tree= have left and right subtree (just not more than 2 kids)
+		length of path = number of edges
+		depth = length from root to node
+		level = all nodes at a depth
+		siblings = share same parent
+		node w/out kids = leaf
+	binary search tree = left always smaller (or equal) than parent, right is always bigger (or equal)
+		binary search tree doesn't have to be balanced, but better balance (less height) is more efficient
+tree traversal
+	inorder
+		left recursively, then current, then right of current recursively
+		prints out increasing order array, left-node-right
+	preorder
+		current node first, then left subtree, then right subtree
+		this is harder than just in order
+		short: node, left, righ
+	postorder
+		left subtree, then right, then current
+		this is harder than just in order
+		short:
+	depth-first
+		same as preorder
+	breadth-first
+		level by level, left to right
+	
+
+	all these are O(n), cus have to go to every element
+	
+	need to learn insertion and deletion
+	b4 that tho, need to know minimum, max, successor, and predecessor
+	these got O(h), where h is height of the tree
+	successor and predecessor used for insertion and deletion
+
+search for an element
+	tree-search that recursively searches for the key
+	O(h)
+	instead of recursive, can do iterative with loop
+	max and min are O(h), they just go all the way to the right/left (respectively)
+
+
+------------MIDTERM UP TILL THIS POINT-----------------------
+
+Successor and Predecessor
+	
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,65 @@
+HW 2 due tonight
+
+last time:
+
+recurrence, divide and conquer
+big -> smaller sub problems
+	same fn to solve smaller sub problems (recursive)
+factorial(n) has n steps, so linear time
+need to know how to define subprob and recursive fns
+twrs of hanoi
+	3 steps
+
+
+now:
+
+fibonacci numbs: add last number and last to last number
+	fib(5)= fib(4) + fib(3 = ?
+	fib(5)= fib(4) + fib(3) = (fib(3) + fib(2)) + (fib(2) + (fib(1)) = ( (fib(2) + fib(1)) + (fib(1) + fib(0))) + (....
+	not efficient bc recalculating things u already calculated
+This is harder, but T(n) = T(n-1) + T(n-2) + c
+	= 2T(n-1) + c
+	...=O(2^n) -----garbage
+
+how to improve efficiency?
+
+for fib, instead of doing top down, we can just do bottom up
+	start with 0 and 1, then build up to desired index (non recursion)
+O notation shot from O(2^n) -> O(n)   ---pog
+	this is example of dynamic programming, will discuss (later) memorization
+	very ez for loop 
+Recursion vs iteration
+	recursion has lots fo overhead, lots of space & mem (time complexity)
+Divide and Conq
+	based on recursive fn
+	when reach base case, stop
+	merge sort is example
+	skip brute force algorithm
+review over all recurrence relations
+	last slide, good review
+
+next ch: sorting alg
+
+sorting alg
+	insertion sort, bubble sort, merge sort, (new now) heap sort, quick sort, sorting in linear time
+insertion sort...ez, T(n) = O(n^2) not great
+bubble sort, they bubble up, T(n) = O(n^2), worst case is descending order
+merge sort, divide and conquer, T(n) = O(nlogn)
+heap sort - new (will learn quick sort next)
+	
+45
+12
+n-1: 1
+n-2: 2
+n-3: 3
+n-4: 
+
+naw fam, the stairs question was fib bruh
+
+
+
+
+
+
+
+

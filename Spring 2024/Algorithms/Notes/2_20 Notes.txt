@@ -1,0 +1,77 @@
+HW 
+
+Last Time:
+
+data structs, contains common functions (insert, delete, find...)
+	like array (fixed size)
+	linked list (a lot better than array for memory bc link allows not having to be sequential in memory)
+		insertion, deletion, best case and worst case
+	circular linked list, double linked list, circular double linked list
+diff time complexities for methods for array vs linked list (memorize these)
+lifo, fifo 
+	lifo = stack, can use array, pointer to top, don't have to actually delete when do pop, just have to change top pointer
+		push, pop, stack-empty
+	fifo = queue, enqueue and dequeue, can used array/linked list, does allow tail to wrap around since size is fixed in the array
+
+
+Now:
+
+answer to the single linked list, just one pass, how to get x'th last element
+	only know address of first node, and last node points to null
+	answer: start from first node, follow link, using pointers (2 of them, 3 (or x) spaces apart), when first node gets to null, the second pointer will be at the 3rd last, or whatever number last it was supposed to be
+
+hash tables, for dictionaries
+	O(n) time for worst case in searching for linked list
+	but avg time is O(1) time (constant time) for a hash table
+	use direct addressing into a normal array, effective
+	however, needs another table, can't have a table to store everything, universe of keys, don't actually need all of it all the time
+	Universe U, can't save the table T with size |U|
+	thats the point of a hash fn, instead of having a table that lists all the indexes, just plug in what u need, get the index (the key, its the result of the fn), go there in O(1) time
+	this is called mapping
+	can't have 2 keys mapping to same slot, this is collision
+	so now we need a good hash fn
+		ex: we got words (that we plug into a hash fn, make sure no collisions): Ant, Bat, Cat, Dog, Eel
+			bad would be just for the # of letters
+			can use alphabetical order
+			if we used new list tho: Apple, Banana, And, Blue, Algorithm
+			bad would be alphabetical of first element
+			good would be length
+	if u do get collisions, can resolve by chaining (use double linked list, but this will take linear time now for those elements)
+		better, but not best
+	how about using load factor = n/m; n = number of elements, m = number of slots
+		this uses linked list, but every slot is uniformly distributed
+		like if u have 10 elements for a hash table with 5 slots, load factor will be 2 (so each slot has 2 values that are linked)
+	time complexity = O(1+a); a is the load factor
+	uniform hashing is the best
+	division method for making hash fn, map key (k) to one of m slots using remainder
+		h(k) = k mod m              -tip: don't choose prime close to an exact power of 2 for m
+to avoid collision:
+	open addressing
+	linear probing
+		when collision during insertion, linear probe: h(k,i) = (h'(k) + i)mod m; where i is iteration, i = 0,1,...,m-1
+		basically, mod the thing, if its taken, go to the next in line, and keep going until reach open slot
+		problem is clustering, slows down search time
+	quadratic probing
+		h(k,i) = (h'(k) + c1i  c2(i^2)) mod m, i = 0,1,...,m-1
+		problem is secondary clustering
+		linear guarantees available cell if hash table not full
+		not guarantee for quadratic
+	double hashing
+		use 2 hash fns, 2 independent keys: h(k,i) = (h1(k) + i(h2(k)); i = 0,1,...,m-1
+	open addressing jsaoidnfeowwwi0vanewioooooooooojfiweoiunnhveviwoehjskehnalieunfhr
+		
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

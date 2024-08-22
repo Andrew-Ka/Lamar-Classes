@@ -1,0 +1,52 @@
+assignment
+
+last class:
+	intro, research
+	why algorithms, which alg more eff
+	depends on input and target
+	insertion sort, merge sort
+	analyze efficiency by: best, worst, average
+	average case is impossible, can't test all possible
+this time:
+	notations, formulas, math for all cases (best, ...)
+
+
+upperbound
+usually see worst case, use to analyze eff
+avg case is good (almost same as worst case), can't find tho
+define running time, Tn (running time fn), its quadratic for O(n^2) = dominating term
+lower order of growth = more effecient
+	merge sort: split array recursively until just 2, put in order, add them together and keep adding until fully in order
+		for merge portion, use 2 pointers to add the sorted sub arrays together, this step takes linear time (equivalent to the amount of elements)
+		A= array, p= index to first element, r= index to last element
+		first check if array is longer than 1
+			if yes, then find midpoint
+			run merge sort for bottom and top half again
+			when done, run merge
+T(n) is numb of steps to solve, n = size of input array
+	for merge sort, 
+		if is 1 step, constant time (not dependent on input, c)
+		int middle is 1 step, constant time
+		merge-sort first is T(n/2) steps
+		merge-sort last is T(n/2) steps
+			adding them up is 2T(n/2)
+		merge is linear, so n
+	T(n) = c, 2T(n/2) + cn
+so T(n) is a formula, recursive, a function, not a number, we want a number
+when have T(n), we need to find T(n/2) bruh
+important first step, make input smaller and smaller
+assume u need K steps to reach T(1), so result is T(n) = (2^K)T(n/(2^K)) + (c*n/4)
+	n/(2^K) = 1, so n=(2^K), so K = log(v2)n
+	2(^K) = n, so just replacing all of it
+	T(n) = cn + cnlogn, or without c's, : T(n) = n + nlogn
+	dominating term is nlogn, so thats our time complexity
+search and sorting algorithms are diff
+	
+
+
+	
+	
+
+
+
+	

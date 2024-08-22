@@ -1,0 +1,63 @@
+Last time:
+LCS
+(row, column)
+
+brief discuss money change prob
+
+
+
+Now:
+C[p] is min numb of coins
+di is first coin in optimal solution
+recursive form: C[p] = 1+C[p-di]
+	one coin + how many coins it takes to get the rest of the p cents
+have to get min, so use row above if its less
+
+we fin the three ex of dynamic programming
+
+Greedy Pgrming TIMEMEMEMEMEMEMEMEMEMEMEMEMEMEMEMEMEMEMEMEM
+
+in dynamic, u find optimal solution using smaller sub problems
+greedy just uses current step, only the moment.....yikes lol
+	this is called locally optimal
+	hope it gets u globally optimal
+	not always give optimal solution, sometimes does
+
+can use money change prob for this
+$6.39 in US money uses 8 items in total (using greedy)
+	(1*$5)+...
+	
+$15 in denom with [1,7,10]
+	Greedy: (1*10) + (5*1) = 6 bills
+	Actual: (2*7) + (1*1) = 3 bills
+
+9 jobs, running times [3,5,...20 min]
+	Greedy = do longest first on whatever processor available
+		shortest job first on what processor available
+
+local optimal choices != global optimal bc we're not considering future or subproblems
+dynamic always looks at each step, look at other subproblems
+	bottom up, smaller-> larger subprob
+
+fractional knapsack
+	still 0-1 (accept or reject)
+	now, u can accept percentages of items bruh
+	so item weight and benefit go down by same percentage
+	divide benefit by weight to benefit ratio, that will be the guiding src for greedy
+		still have to use the same weight subtraction and benefit addition
+		just last items will most likely be chopped up
+	
+Huffman Codes
+	compress data, 20% - 90%
+	grey scales: 0-255, 0 is black, 255 is white, all inbetween are the diff shades btwn (grey)
+	each has 8 bits
+
+	
+
+
+	
+
+
+
+
+

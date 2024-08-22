@@ -1,0 +1,27 @@
+**Time complexity is optional questions**
+
+BST
+	Insertion 
+	Deletion
+Dynamic Pgrm	
+	0-1 Knapsack
+	LCS
+	The Change Problem
+Greedy
+	Huffman Codes
+Graph
+	Graph Rep
+		adjacency matrix
+		adjacency list
+	Graph Search
+		BFS
+		DFS
+	Min Spanning Trees
+		Kruskal's
+		Prim's
+	Single Source Shortest Path
+		single destination shortest path problems
+		Bellman-Ford
+		Dijkstra's Algorithm
+	All Source Shortest Path
+		Floyd W alg

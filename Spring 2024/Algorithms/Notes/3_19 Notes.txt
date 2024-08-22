@@ -1,0 +1,59 @@
+Midterm not graded yet
+Will go over on Thursday
+
+Second half of semester will be focused on dynamic (harder) and greedy pgrming (ezer)
+will cover graphs as well
+design efficient alg for/from graphs
+
+
+B4:
+dynamic pgrming
+	optimum solution for many problems
+steps to apply the idea
+	bottom up, divide and conquer
+	optimum solution to every single subproblem
+	use table to solve problem
+		every entry in the table is a solution for a subproblem
+		|----------------------|
+		| (i-1, j-1)| (i-1, j) |
+		|___________|__________|
+		|           |          |
+		| (i, j-1)  | (i, j)   |
+		|----------------------|
+	subproblem -> recursive formula -> program -> table
+0-1 Knapsack problem
+	recursive formula (for subproblems)
+		FIRST k items
+		current capacity is small w
+		if w(vk) is > w, can't use it, reject
+			then recursive, looking at k-1 items, no change in w
+		else, check the max benefit for reject and accept
+			this is recursive, run each reject (B[k-1,w]) and accept (B[k-1,w-w(vk)] + b(vk)]
+			it will return values in total value, and whichever is highest will be chosen
+	need to know how to divide og problem to subproblems****
+	pgrming part is ez after the formula
+	now need to know which items u used to get that max val
+		"ez", check number above
+		if they are the same, if not, then that item was used
+			so like @ w=4, when i=2 and i=3, the number changed from 4 to 5
+			by this we know item 3 was used
+			then we have to recursively subtract i till it gets to 0
+				recursive by going down the rows, thats i, and then checking for 
+				the weight difference (so moving up a column first, then to left on rows)
+		else, the item wasn't used, move to the row above and check for change
+next example: LCS (longest common subsequence)
+	Sequence: ACTTGCG   (YES THATS DNA LOL)
+	Ex Subsequences: AC, ACT, ATTC, T, ACTTGCG
+	doesn't have to be consecutive, but does have to be in order (left to right)
+	Common Subsequence: subsequence in multiple sequences
+	Longest common subsequence: the longest of the common subsequences
+	its hard, but similar idea (from 0-1 knapsack) for defining subproblem
+	subproblem: start with smaller sequence, finding LCS in that, then build up
+	c is lcs (length), i is how many letters in first subsequence, j is in second subsequence
+	c[i,j]
+	if the i or j = 0, then 0
+	if xi == yj, then c[i-1, j-1] + 1 //xi is last element of i, yj is last element of j
+	if xi != yj, then max(c[i-1,j], c[i,j-1])
+
+
+	

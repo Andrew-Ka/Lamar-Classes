@@ -1,0 +1,64 @@
+HW 1 go over
+key online
+
+worst case, nothing worse than worst case
+line 5 to check if switch is needed
+	yeah I don't think I did good, yikes! Its very detailed oriented, **NM I think I put enough details
+merge is same numb of steps, bc split always happens and merge always happens
+	missed this, I thought merge step has to check and do an extra step, but it doesn't
+bonus, it was (log(v2)N)^2
+	I got the inner loop, not the outer loop
+	actually i don't think I got any of the bonus lol
+***********will see similar question on midterm (like the bonus, but not harder)********
+
+
+assignment 3 posted
+	base case 2, sqrt, this is gonna be fun, do substitution
+	array with descending and ascending subarrays, min element in O(logn) time, not O(n) (so not comparing one by one)
+		binary search
+	pseudocode, recursive to get m(i) __this is ez question
+	insertion sort alg, the STEPS, not code
+	bubble sort
+
+
+Last time
+last ex of divide and conquer: fib
+	recursive (top-down) or (better) nonrecursion (iteration, bottom-up)
+sorting and order statistic
+	HW 3 he needs smth like slide 5 and 9 (insertion sort and bubble sort
+
+
+Now:
+heap sort
+	tree structure
+	heap = binary heap = complete binary tree
+		tree hierarchy, either mt, has element (root), and 2 distinct binary trees (lft & rht subtree)
+		complete binary tree = every level full excep last lvl may not be full, but all leaves on last lvl are placed left most
+			will learn binary search tree later, heap is similar but not the same (bin st is big small lft rht)
+	These 2 first have to be complete binary trees
+		max-heap prop: parent >= its children, "parent always larger (or equal) to its children"
+		min-heap prop: parent <= its children, "parent always smaller (or equal) to its children"
+	not static structure tho, have to use other structures to show the tree, like an array
+		ez, just go top lvl to bottom lvl
+		hard part is finding parents and children of element
+		pseudocode on slide to find lft and rht children and parent
+	*it starts with 1 as index, not 0 FOR HUMANS (and for this class), then in pgrm its back to 0	
+Max heapify
+	to convert heap to max heap
+	first find the biggest out of the parent and lft and rht childs
+		exchange to put largest as parent
+	recursively go down from top to leaves	
+Build max heap
+	use max heapify in a for loop, then move down 1 index
+	start from last node WITH children, not just starting with the last lvl
+		dont 4get max heapify is recursive down the lvls
+	
+	
+	
+
+	
+	
+
+
+
+

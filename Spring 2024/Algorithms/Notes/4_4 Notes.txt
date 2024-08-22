@@ -1,0 +1,87 @@
+Pog
+
+Last Time:
+
+Greedy-Huffman Tree
+	compression ratio
+	did it
+	higher frequencies have shorter huff codes
+	
+
+Now:
+
+Graphs
+used in segmentation (for image stuff)
+	edge may have different things
+	in image segm, it can mean how similar in color btwn pixels
+		strong/weak edges in numbers
+	"Cut" = segmentation, cut the weak links
+Topics
+	Elementary Graph Alg
+	Min Spanning Trees
+	Single Src Shortest Paths
+	All Pairs Shortest Paths
+Elementary Graph Alg
+	Graph (G), edge/arcs (E), vertices/nodes/points (V)
+	E⊆VxV
+7 bridge of Konigsberg
+	fun, answer is NO
+	we can convert the OG image to a readable graph
+Basic Terms
+	Directed Graph: 
+		each edge/link has a direction
+		can only go from one vertex to other, not back
+		Ex: parent to children, not back
+	Undirected Graph:
+		can move in hoth directions on an edge
+	Weighted and Unweighted:
+		each edge can carry a weight, self exp if has or not and name
+		its like flight tickets to each location (vertecies)
+	Adjacent vertices
+		if they connected by same edge
+	Adjacent edges
+		connected by the same vertex
+	Loop
+		edge that links vertex to itself
+	Parallel edges
+		2 vertices connected by 2/more edges
+	Simple Graph
+		no loops or parallel
+	Complete Graph
+		basically if you can get everywhere from every single vertex (using only 1 edge)
+	Path
+		ordered list of directed edges (showing the vertices in paranthasis and commas)
+	Connected
+		u can get to all vertices, no matter how many edges
+	Subgraph
+		subset of graph
+		edge set is a subset of that graph as well
+	Cycle
+		closed path that starts and ends at same vertex
+		its like a roundtrip
+How to rep graph
+	adjacency list or adjacency matrix
+		adjacency list = make a linked list for each vertex, where the first link is the vertex and the other links are what it can connect to
+		adjacency matrix = 2d array, top and side are all the vertices, if they connect then 1, if not then 0
+		linked list is better for storage (image a 200x200 matrix vs 200 lists both with only 1 connection)
+		matrix better for usage (ez time complexity of 1 (constant))
+	V² for matrix mem, but V for list mem
+
+Search
+	find a specific vertices or smth
+	can use BFS for shortest path only for unweighted graph 	
+BFS
+	like a tree, start from root s, go thru all u can connect
+	3 colors for vertices to show status, white, black, and grey
+		white = not discovered
+		black = it and all its adjacent vertices has been discovered
+		grey = it has been discovered but some of its vertices haven't been discovered
+	also have distance (d) and predecessor (pi), use queue Q to implement overall
+
+	parts of pseudo
+		Initiallizing
+			everything set to white
+		Set up s and initialize Q
+		Explore all vertices adjacent to current, update d, pi, and Q
+
+

@@ -1,0 +1,110 @@
+test on thursday
+	pseudocode - we are typing it *yikes*
+	no mcq, but similar to HW q's
+	there will be bonus q's
+	midterm exam review
+		avg case is best, but impossible to get
+		best case isn't useful
+		need to know how to get T(n) 
+		math summations (very useful)
+		T(n) for big O, T(n) of an algorithm)
+		motivations for recursion and examples (factorial, but more to know is Towers of Hanoi and Fibonacci (2 ways, bottom up and top down))
+		div and conq -> solve easy and then build up by solving bigger
+			time complexity
+		order statistics of the sorting algs
+		there will be q of heap sort, know the steps, nothing special
+		quick sort, partition, SWAP NOT SHIFT, will be a q
+		med, max, min, find these through linear time (can do all three at once, just traverse once)
+		selection problem, will be important***** (quicksort, but on selection instead of sorting)
+		Data structures, know operations (the basics of each) and time complexities of each
+		hashing- why we need, fn, table, collision (and how to fix, use linked list maybe), addressing, probing
+		binary search tree- def, inorder, preorder, postorder, BFS, DFS, search, min, max 
+		266 slides in total****bonus question
+
+		
+HW due 2day
+
+2day: review
+
+insertion sort: best case = linear; worst case = n^2
+avg case sometimes bad as worst case
+**must know merge sort T(n)**********will be on test****ch 2 slide its important
+	T means the algorithm, n is input (input size)
+	T(n) = T(n/2) + T(n/2) + O(n), then go through base case
+	worst case O(n) = nlog(n)
+Don't worry abt theta notation, but know avg lies in btwn c2 and c1
+	O(n), worst is the lowest, c is above it (in the graph)
+	just understand the individual graphs and when plugging in #'s what ur looking for
+Transitivity and Reflexitivity (maybe)
+**know math summations
+loops
+	bonus question on the hw, might have nested loop, but won't be harder than hw q's
+		given base case assumption (n = 2^k), solve from there
+constant time (give index, use for array)
+analyze binary search
+know the recurrance relations and algs that go with them
+on practice, pratice 2 was hardest, practice it
+factorial
+	stack is better
+linear time
+*****towers of hanoi, need to know how to do this, the 3 steps, separate problem into sub problems****
+	T(n) = T(n-1) + 1 + T(n-1)
+	need to know how to get T(n) from pseudocode
+	2^n = O(n)
+fib is low efficiency bc recalculating what u already calculated
+	use bottom up, more efficient, this is nonrecursion, linear O(n)
+	using top down, it would be 2^n
+recursion vs iteration
+merge sort
+	time complexity: nlog(n)
+climbing stairs question
+	this is discrete fib sequence
+sorting algs
+	insertion and bubble not rly important
+	merge in linear time if sorted sub arrays
+heap sort **** nlogn 
+	will be q on exam
+	need to know the steps, how to find max heap (min heap is similar, idk if he's gonna ask)
+	convert from input array to make heap - its not gonna be max initially
+	build max heap (this is different fn than max heapify, but it uses max heapify to maintain max heap characteristics)
+		max heapify, use to maintain max heap property
+		understand the program, may give pseudocode, but will take time to analyze during test, so know it
+		this is recursive, so don't forget that
+	then use heap sort for output
+quicksort
+	divide and conquer
+	partition, SWITCH NOT SHIFT (NOT INSERTION)--EVEN THE LAST ELEMENT IS EXCHANGE, NOT INSERTIONS
+	need to know best case and worst case
+		worst is literally every step is worst, not just one step
+		best case is T(n) = T(n/2) + T(n/2) + O(n)
+		worst case is T(n) = T(n-1) + T(0) + O(n); last element is smallest or largest
+selection problem******************
+	min and max are ez
+	randomized is like just replacing the last element (helps by not getting worst case supposedly)
+	
+elementary data struct: array, linked list, stack (can use array, use pointer for s.top), queue (can use array, tail and head can be on opp sides)
+	need to know complexity of insertion, deletion
+	pop or peek or 
+	enqueue and dequeue
+O(1) time for search in hash tables
+hash tables and fns
+	don't wanna store every single key, so use a fn
+	reduce collisions, dependent on what ur storing
+	to reduce collisions
+		chaining, this uses linked list, but can make too long linked list (not ideal)
+		open addressing
+			linear probe (can make primary clusters)
+			quadratic probing (can make secondary clusters)
+				key%N, know how to do it IN ORDER, PEMDAS
+			double hashing (best, uses 2 has fns, but first time we don't use 2nd hash fn, only when collision happens for that element)
+binary tree, binary search tree (big on right, small on left)
+	find min and max
+	O(h) is time complexity, where h is the height
+
+
+
+going over insertion and deletion for binary seach tree
+	insertion: check root, if greater, go to right, else smaller go to left (always go to leaf node)
+	deletion:  after mid term
+		
+

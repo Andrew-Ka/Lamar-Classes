@@ -1,0 +1,46 @@
+bonus for attendance? pog
+think in long term...
+very inspirational
+
+HW4
+HW2 go over
+	1. n=4, use examples
+		theta notation (average)
+	2. needed more mathy proof
+	3. O(nlogn) = leading term
+
+
+last time:
+
+heapsort alg
+	uses build-max-heap fn and max-heap fn
+	last node becomes root, then rebuild as max-heap, recursively till in order
+	time complexity: O(nlogn), which is same as merge sort
+	
+
+This time:
+heap sort and merge sort both have O(nlogn)
+	for merge sort, u need temporary arrays to hold sub arrays (lots of space)
+	heap sort, no need of more space
+		by space efficiency, heap sort is better
+	
+Quicksort
+	follow pseudocode given here, there are a lot of diff versions
+	worst case is O(n^2), but its efficiency on average is better, O(nlogn)
+	divide and conquer, like merge sort
+		divide into 2 subarrays
+		around middle element, 2 subarrays can have different sizes
+		repeat, divide and conquer
+		combine, no need, they are in order by the end of it
+	partition fn	
+	use color for characteristics
+		use white to compare
+		racism
+	make sure u EXCHANGE and not insertion, bc insertion is linear time, but exchange is constant time
+*****quick sort will be on the test
+
+
+	
+	
+
+

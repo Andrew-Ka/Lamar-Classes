@@ -1,0 +1,62 @@
+last time:
+divide and conquer quicksort
+	partition is important
+	EXCHANGE NOT INSERTION
+
+
+This time:
+worst case for quicksort is when u get two subarrays, one with n-1 elements, and second with 0 elements
+	like putting in an already sorted array (either backwards or forwards)
+
+quicksort worst case is O(n^2)
+quicksort vs mergesort
+	quick has O(n) bc partition first
+	merge has O(n) bc merge step
+
+worst case for partition vs quicksort
+	partition is part of quicksort
+	just bc first step is worst doesn't mean the whole array is the worst case
+
+rando quicksort
+	rando pick an element, swap with last (so now it becomes pivot)
+better method is pick 3 elements, use the middle as pivot
+	still always using last element as the pivot, but for these 2 we are swapping the last element with whatever we chose
+
+sorting in linear time
+	comparing keys rather than the elements themselves, so need more info (so if no info, can't use linear sorting alg)
+	lower bound for general sorting alg are O(nlogn)
+	not useful apparently, just bc we need other info
+
+last topic: order statistic
+finding smallest element, or 3rd smallest, or seventh,
+	these are selection algorithms, not search
+can find using median
+	we use lower median (essentially find half, and if decimal, round down)
+selection problem
+	
+minimum
+	return min after for loop, holding a temporary element and replacing if finding smaller
+simultaneous max and min
+	2 comparison per element, just 1 loop
+	can be done better tho, for like 3 comparison for every 2 elements
+
+selection prob
+	even if we remove rando selecition its the same thing bc we still need to use the partition
+	very similar to quick sort, cuz we're using the pivot
+	we know the location of the pivot after sorting it using quicksort, so we get the index faster than sorting the whole array (hopefully)
+
+we finished the unit
+
+
+interview question: linked list
+
+
+
+
+while (a.next != null) {
+a = search
+b = a.next
+c = b.next
+
+if (c.next == null):
+	return a

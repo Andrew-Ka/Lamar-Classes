@@ -1,0 +1,53 @@
+assignment 2 open now
+go for mathematical methods (q2)
+q3 was the bonus for assignment 1
+due teusday
+
+
+last time
+	seta notation, c1 * g is lower than f, c2 * g is higher
+	seta is avg
+	O is worst case
+	Omega is best case
+	small notations, not required
+		they are not tight bound, they are annoying
+		use any c value, obnoxious big and small vals
+	comparison of fns
+	"not hard - think abt this", slide 1 i think bruh
+	looked @ for loops	
+	constant time/operation
+
+
+cont ch 3
+
+binary search, time complexity
+efficient, but input must be sorted
+	its log(n)
+recuurence relation
+	diff recurrenct relations (the diff T(n) w/ results (the result bruh)
+look over the practice slide (2nd to last one)
+
+
+ch 4 - divide and conquer
+
+recursion
+stack
+	forward recursion uses a lot of stack space bc have to save prior things
+	factorial is O(n) bc just needs that amount of steps
+		count the operations, like 5! is 5 multiplcation steps, so its linear
+chars of recurions
+	base case
+	og problem till reach base case
+towers of hanoi (you can only use 3 towers, disks is variable amount)
+	base case would be like this
+		can we solve w/ 3 disks? -> 2 disks? -> 1 disk?
+	move n disks, but b4 we need to move n-1 disks, but b4 we need to move n-2, ...
+	its 3 sub problems
+		i didnt write themdown their on the slides
+the towers of hanoi have O(2^n) ------gar bage
+	
+
+
+	
+
+

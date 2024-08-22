@@ -1,0 +1,62 @@
+review
+
+
+merge sort used log time, O(nlogn)
+T(n) = total number of steps for n elements
+base case -> k = T(1)
+
+
+ch 3
+
+overview
+
+lots of notations, omega, big and small, o, big and small
+asymptotic efficiency
+
+
+now
+
+sita (?) notation = average case
+	flipped down E = there exists
+	upsude down A (n) = for any n
+look at graph, n0 condition
+	x axis: n (n elements, items)
+	y axis: T(n)
+	c = coefficient
+finding a n0 given gn and testing c1 and c2
+	
+O notation: worst case, most useful
+	c*g(n) w/ f is worst case, bc it can only be better than c*g bc c*g is ur worst case
+	on graph, f might even align with c*g, but never overpass it
+		lower T(n) is more efficient
+	
+Omega notation: best case
+	same concept, just f(n) >= g(n)
+
+small notations: not tight bound, not required, just understand
+	small o notation
+		for any c, all the rest is the same for big O
+		its not just finding 1 c, its for any c value
+	small omega notations
+
+
+
+
+next ch
+ch 4
+
+comparisons
+transitivity
+	only holds for big notation
+symmetry, transpose
+not bad
+
+math summations
+	analyze time complexity
+	memorize everything
+
+	
+
+
+
+

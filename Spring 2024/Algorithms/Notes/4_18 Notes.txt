@@ -1,0 +1,58 @@
+HW 10 due saturday
+3 More classes after this
+	maybe last class will be interview questions
+My 7th is final for this class
+
+
+Last Time:
+
+Single src shortest path
+specific btwn 1 vertex to another, min weight
+carful abt negative weight edges (negative cycles)
+	can't find shortest path in these
+2 methods:
+	bellman ford: distance to each vertex is initial 0
+		then use relax method: check for shortest weights per vertex
+		run total of vertexes - 1
+		if negative weight cycle, then return false
+do the examples from the slides
+
+
+
+Now:
+
+2nd method: dijkstra's alg
+	this doesn't check for negative cycles cuz assumes all edge weights are nonneg
+		so to apply, make sure no neg edges*********
+
+still uses relax fn
+code
+	first initialize (same as b4)
+		still have min priority que like Prim's (which isnt for this ch but is the same)
+run while loop as many times as vertex (bc have to dequeue all of them)
+not bad, do the ex from the slides
+**remember don't do this with negative edges***
+
+LAST TOPIC WOOOT WOOT
+Floyd Warthschawt isjjflskodipoisnebsnkweiogianspeouehgnqpoeixkzmdeingeiosidngbxbdcimqoieutyqndkxmnaksjeling
+
+all pairs shortest path
+it uses dynamic programming idea
+can solve by using single source shortest path, but we change the start point, so it goes for all vertices
+	basically, u can choose any 2 pts and get the shortest weight between them
+this not efficient tho
+
+we gotta use adjacency matrix to show the graph
+	in weighted graph, we can use the weight in the matrix instead of just 0 and 1
+
+Floyd Warshall Alg
+	dynamic pgrming based alg
+	"bottom up"
+	path p = (a bunch of vertexes) is vertex other than v1 and vl (the start and ending vertex's).... smth words
+ 
+	subset of the vertex's
+	k is recursive?
+check if k is needed
+	if yes, then path is i -> k -> j
+	of no, then path is i -> j
+then check again for other vertices using (1, 2,... k-1)

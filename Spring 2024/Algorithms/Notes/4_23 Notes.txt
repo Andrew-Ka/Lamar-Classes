@@ -1,0 +1,30 @@
+Last Time:
+
+Dijkstra's alg
+	don't use neg edges for this, it won't work (correctly)
+All pairs shortest path
+	based on dynamic pgrm
+	have to use adjacency matrix
+	Floyd-Warshall Alg
+		define smaller subprob: do we need a vertex or naw
+		use smaller amount of vertices
+
+
+Now:
+
+cont.
+	recursive formula
+		d v(i, j) ^(k)
+		if k = 0
+			return the weight from i to j
+		if k>- 1
+			min (d v(i, j) ^(k-1), d v(i, k) ^(k-1) + d v(k, j) ^(k-1))
+	consider k is on shortest path
+		if yes, then include
+			then have to find shortest path from i -> k as well as k -> j
+			this is path1 and path2
+			subpath of shortest paths are shortest paths
+		if no, then don't include
+			then shortest path is same without that vertex
+this will be on final
+

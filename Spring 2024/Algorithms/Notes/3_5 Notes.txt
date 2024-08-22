@@ -1,0 +1,44 @@
+midterm was last week
+grades after spring break
+
+
+Now:
+
+data structures continued
+	binary search tree (left is always smaller, right is always larger
+	insertion and deletion
+		insert one by one, basically building it, keeping the binary search tree property
+			pseudocode looks funny, but it makes sense
+		deletion is harder
+			if no children, then just remove the node (becomes NIL)
+			if has 1 child, then elevate the child
+			if has 2 children, find successor that has no left child (which is the successor), kinda need a fn called transplant to move possible subtrees
+				(btw, these are hard, practice these)
+				successor: smallest key greater than x.key, so go to right of x, then go down left of that until no more (leftmost element in the right subtree), if right tree is empty, go up to parent until hit it being left child (parent has to be smallest that is bigger), use Tree-Minimum with the right subtree
+				predecessor: the oppositie, find biggest that is smaller than x, so go left and then all the way right
+		transplant: check root (if it has no parents)
+		tree deltion psuedo is long, also funny, uses transplant
+			when has only one child, don't need succession, just replace
+			only use successor when has both children
+		for deletion, can use predecessor, BUT FOR THIS CLASS, USE SUCCESSOR
+time complexity if T(h), where h is height of the tree
+coolio
+red black trees
+	balanced tree is O(logn), bc h = logn
+	cannot have 2 reds connected, can have 2 blacks connected
+	results in balanced search tree
+data structure done---------noice
+
+advanced pgrming: dynamic and greedy pgrming
+Dynamic pgrming:
+	like divide and conq, solves problms by combo solutions to subproblems
+	bottom up fashion
+	subproblems overlap, so subproblems share subproblems
+	solve subproblem once, then save answer to not have to resolve subproblems
+	always want optimal solution, recursive
+		recursive is based on divide and conquer
+	most important part is finding that subproblem
+0-1 (accept or reject) Knapsack (backpack) problem
+
+
+

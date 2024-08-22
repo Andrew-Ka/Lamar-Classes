@@ -1,0 +1,75 @@
+HW 10 up
+	1. Huffman tree and code, decipher
+		first need to get the frequencies of each letter
+	2. Adjacency list and matrix off of graph
+	3. BFS to search graph (updated queue every time)
+		enqueue in increasing order
+	4. DFS, 2 tables, increasing order (time stamps)
+
+
+HW 7 go over
+	1. Preorder and post over
+		preorder is top, then left, then right
+		postorder is left, then right, then top
+	2. Removing from tree (using successor, which is smallest in right subtree if it has a right subtree)	
+
+HW 8 go over
+	1. Copied from the slides
+	2. 0-1 Knapsack 
+		what is subproblem (with first i items, what is the max benefit with a knapsack of max weight of W)
+		Solve the problem (recursive, "Just Do It" - Zhang sponsored by NIKE)
+		what items did u add
+
+HW 9 go over	
+	1. LCS, but with longest nondecreasing subsequence, just use 2 sequences as alphabetical and og word
+	2. Greedy method money change prob
+	3. Fractional Knapsack using greedy, find most valuable ratio item
+	
+
+
+Last time:
+
+Min Spanning tree
+	Kruskals alg
+		order edges in increasing order
+		use smallest edges first, connecting unconnected vertices (vertices that are already in the same tree)
+		have lots of small trees that are eventually connected
+		essentially no cycle
+	Prims algs
+		1 tree, start from 1 specified vertex
+		min priority queue
+		choose smallest edge and then add that
+		when choose edge, the vertex also gets added, and the vertex's edges are added to the min priority que
+
+
+
+Now:
+
+Single Src shortest Path
+	start from 1 vertex to see how to find shortest path to another vertex
+	input is weighted directed graph
+	weight of a path is sum of the weight of the vertexes between the two vertexes
+	Can't use BFS bc it doesn't take in weight
+	Single destination shortest path prob = multiple starting pts, go to 1 destination
+	Single pair shortest path prob = 
+	all pairs shortest path prob
+
+	Careful abt negative weight edges, can get loops and keep going lower
+		its like time travel, or getting paid to go on a road
+		its more like careful abt negative loops
+		negative edge is acceptable, but not loop
+
+2 Methods
+Belleman Ford method
+	1. initialize
+		parent and distance (initialize all the distances to infinite)
+		we start at s, distance is set to 0
+	2. Relax method
+		pass in 1 vertex, another vertex, and then weight
+		if the weight of the second one is greater than the weight of the first + weight of the path, then replace
+			following the full alg
+	the method returns false if there is a negative weight cycle
+	3. Check all edges to see if u can RELAX, then check every edge for negative weighted cycle
+
+
+

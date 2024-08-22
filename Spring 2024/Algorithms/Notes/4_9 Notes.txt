@@ -1,0 +1,73 @@
+Last Time:
+
+List vs Matrix
+	Better for List when not many connections, don't want huge matrix
+	If lots of connections, then might wanna do matrix, otherwise too big of lists 
+Know how to make list/matrix from graph and vice versa
+directed vs undirected graphs
+weighted vs unweighted
+BFS and DFS
+	BFS is for shortest path (only for unweighted)
+
+
+Now:
+
+
+BFS
+	white = not discoverd
+	black = it is discovered and all adjacent vertices have been found
+	grey = it is discovered, but not all adjacent found
+FIFO queue Q to manage set of grey vertices
+3 pts to pgrm:
+	Initialization (start at vertex s, all others not found)
+	Enque s, so now Q has 1 element
+	While loop until Q is empty
+		dueque s and set it to u
+		check adjacent vertieces and set the white to grey, change u to black
+O(V+E)
+	time complexity is number of vertices + number of edges
+By assigning the length number, we can go along from the parent to the edge u want to find shortest path
+Printing Path
+	recursive
+	check parent
+	keep printing vertices till reach target
+DFS
+	always go deeper when possible, "harder"
+	edges out of most recent vertex
+	edges in diff categories
+	Adjacency list, still use white, grey and black
+		white = not discovered
+		grey = discovered but not finished
+		black = finished
+	use d[u] and f[u], these are timestamps
+		need these for every single vertex
+		d[u] is when u (the vertex) is first discovered
+		f[u] is when search finishes u's list
+pgrm
+	graph input
+	2 pgrms, one is DFS, other is DFS visit (to find all adjacent vertices, input is graph and current vertex)
+		recursive, then after fin rec, change to black, save second time stamp (f)
+avg time complexity is V + E
+4 types of edges (for directed graphs)
+	tree edge = the first forest, edge was discovered by exploring edge
+	back edge = depth first tree, connects vertex to ancestor (smth we already found)
+	forward edge = vertex to descendant in depth first tree
+	cross edge = all other
+all vertices has 2 numbers, d/f (start and stop)
+
+application of bfs
+	check if graph is connected
+	path btwn vertices
+	finding shortest path (only bfs, unweighted graphs)
+	all connected components
+		max connected subgraph
+	cycle in graph (if there is or not, and where)
+DFS
+	graph is connected
+	path btwn vertices
+	connected
+	cycle
+
+
+THERE WILL BE A DFS QUESTION ON FINAL
+

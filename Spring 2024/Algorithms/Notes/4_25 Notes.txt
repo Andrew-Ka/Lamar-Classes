@@ -1,0 +1,67 @@
+Review of Topics:
+
+Def of alg
+algs and efficiency
+3 notations
+divide and conquer
+heapsort
+quicksort
+sort in linear time (need more info tho)
+selection prob
+data structs
+array, linked list, queue, stack
+hash tables
+binary search tree
+
+--midterm--
+
+insertion and deletion in binary search tree
+Dynamic programming
+	0-1 knapsack
+	LCS
+Greedy Alg
+	Huffman Code
+	frac money change prob
+Graph
+	adj list vs matrix
+	min spanning tree
+		Kruskal vs Prim
+	Single src shortest path
+		bellman-ford
+		negative cycles
+	All pairs shortest path
+		Floyd Warshall
+
+
+
+make sure use successor (left most on right tree, smallest that is bigger) to replace
+****will be a deletion question***
+
+**need to know which elements used for knapsack**
+*******will be new dynamic programming question***********
+
+
+
+***Will be huffman coding question, conceptual why***
+
+
+*list vs matrix convert to graph and vice versa*
+**time complexity and space complexity of the graph stuff**
+***BFS and DFS of graph***
+	**know the types of edges********will be on test**********
+	bfs got shortest path, not using edge weight tho
+**Kruskal and Prim**
+**negative edges**  vs negative cycles**
+***Bellman Ford and Dijkstra**
+	Dikstra doesn't work right with negative edges
+	bellman ford cycle's is numb of vertices - 1
+****floyd warshall alg****
+	dynamic pgrming   THIS WILL BE LAST QUESTION ON THE TEST
+
+
+
+
+
+Interview questions:
+
+mice wine brain teaser

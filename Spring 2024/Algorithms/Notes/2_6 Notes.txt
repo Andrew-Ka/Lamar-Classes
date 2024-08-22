@@ -1,0 +1,24 @@
+HW 3 due 2day
+use n to show k
+
+
+this time:
+max heap stuff
+	build max heap fn gives us a starting point for max heap
+	it gives us the parent of the last child, recursively goes down when replace
+1st make heap -> 2nd max heap -> 3rd heap sort
+	did 1 and 2 last time, now its for heap sort
+
+heapsort alg
+	input is array -> build max heap
+	then for-loop
+		length of array down to 2, 
+			exchange root with last leaf, so in the array, the last element will be the original root, and then remake max-heap
+			this gives us the largest bubbleing out every time
+	it just goes down for loop until array is done===sorted
+***this will be on the test
+max number of elements for h as height is 2^(h+1) - 1
+	2^h <= n <= 2^(h+1) -1
+[] means largest integer smaller than...
+	like [logn] is largest integer smaller than logn
+time complexity for heap sort is O(nlogn), which is the same as merge sort

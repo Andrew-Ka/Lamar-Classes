@@ -1,0 +1,49 @@
+Last Time:
+
+April 30 is last class day for this class
+we kinda accidentally on schedule
+Final for this class is May 7th, tuesday
+bfs, dfs
+	dfs is harder, adjacency list, keep going deeper, 2 time stamps
+	bfs uses queue, add to queue when new adjacent, when queue is empty, we know we done
+	for bfs, keep showing new queue
+	only for bfs can we use to show shortest path
+
+
+
+Now:
+
+min spanning tree (ez apparently)
+	has all vertices, but weight is min
+	graph is vertices and edges, can be undirected
+	every vertices has an edge to all other vertices (can get from one vertex to another, but doesn't have to have direct route)
+	looking for min total weight, where weight is for an edge
+	1 graph can have many spanning tree, and multiple min spanning trees
+
+2 methods: Kruskals and Prims
+	
+Kruskals Alg
+	sort edges into small-> large
+	go smallest edge first
+	for loop, look at edge, go nondecreasing order	
+	smth bout making a union
+		make sure edge isn't already included in min spanning tree
+		if it was included, then u get a cycle, which isnt a tree
+	return a mst
+
+Prims Alg
+	edges in set A always form single tree
+		K's had multiple trees that you had to combine
+	rando root, grow until all vertices checked
+	each step adds edge to isolated vertex
+	given graph, weight and root
+	initialize the vertex
+	set key to 0 for the root
+	dequeue min element (min priority queue)
+	for loop in a while loop
+	check if edge is smaller than key
+	
+	basically, have 1 vertex
+	check the edges of it, pick the lowest
+	now u have 2 edges, add to the queue all the edges from those 2 vertices
+	dequeue smallest edge and add that vertex

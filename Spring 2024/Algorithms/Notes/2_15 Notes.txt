@@ -1,0 +1,65 @@
+HW 3 Review
+	so essentially, think of div by 2 as logn, and sqrt as loglogn
+HW 5 is up
+	worst case is when one sub array has 0, other has n-1 (like already sorted array)
+	find 4th smallest element in array using SELECT- no2 is very useful for interviews
+midterm is in 2 weeks
+	way to get 100 = follow sheet
+
+
+Last:
+
+know how to get nlogn using the T(n) = 2T(n/2) + O(n)
+max, min and select (O(n) for SELECT)
+	detailed analysis in txtbook, i have a feeling thats gonna be on the test
+
+
+
+Now:
+
+Data structs: elementary data structure, has table, binary search tree, extra is red black trees (limitations of binary)
+sets = manipulated by algorithms, size changes, this is dynamic
+diff types of operations (test = search; insert; delete)
+	dynamic set that supports the fns are called dictionary
+
+array = low lvl, fixed size data struct, but can still use as dynamic data struct by making new larger array to replace current array (for things like insert)
+for arrays, need to have 2 basic ops
+	insertion: if not full, move everything to right
+	deletion: delete element from array, then move all the other elements to the left (for the elements to the right of the deleted elements)
+	time complexity for both is O(n), which is why in Quicksort we gotta do Exchange, not insertion
+
+linked list= don't have to store elements back to back (in memory, low lvl)
+	each element points to next in singly linked list, last element's pointer is null (tail element)
+	insertion: just change the pointer to the next element u wanna add, and make ur pointer the next element
+	deletion: just change the prior elements pointer to the next elements pointer
+circular linked list= no tail, it just continues to point to next element
+double linked linked list= can go forward and backward link
+circular double linked list= no tail on double linked list
+
+	for the not circular ones insertion: (we only know the head node)
+		best case for these is insert at beginning
+		worst case is insert last node (cuz have no idea of end until u get there)
+		O(n)
+	deletion:
+		worst is delete last element
+		O(n)
+
+important to know these dependent on tasks
+
+Stack: LIFO (last in first out)
+	insertion = push
+	deletion = pop
+	can use array to implement, just need "top" pointer (an actual pointer, not what i was saying b4) to point to the index
+		pop doesn't have to delete the element, just hold to allow overwrite
+	stack empty (check if top == 0), push (moves top to next element), pop (checks if stack empty, if not update top to one less element, return that element)
+
+Queues: FIFO (first in first out)
+	insertion = enqueue, it adds element to back of the array, allow looping around (where if first part of the array is available, tail can update to first part of the array), have a possibility of tail<head
+	deletion = dequeue, it removes the head
+		
+
+
+
+
+
+

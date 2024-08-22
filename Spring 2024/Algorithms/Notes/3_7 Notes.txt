@@ -1,0 +1,51 @@
+HW 7 due after spring break
+	insertion, deletion on tree
+
+HW  6 go over
+	to insert into full, make new array
+	then add old elements to new
+	insert new
+	2) 2 links, structure of double linked list
+	3) worst time complexity when insert is 1st, have to find empty space for new, so move all other
+	4) probing
+
+b4: 
+
+binary search tree
+successor and predecessor
+	successor = smallest that is biggest, go to right, then all the way left
+	predecessor = exact opposite, biggest that is smaller, left then all the way right
+insertion and deletion
+	insertion = ex, big go right, small go left
+	deletion = 4 cases, either 1) no kids, 2) 1 kid, 3) left most on right is a parent not left in some wierd combo
+
+
+now:
+
+dynamic pgrming
+div and conq based, subprob overlap
+use table to save solutions to subproblems
+OPTIMALLLLLLLLLOLOLOLOL, bottom up fashion (like fib)
+
+0-1 Knapsack problem
+	Description: u got a bag with a certain weight capacity
+		u have a couple of items, each has a weight and benefit
+		maximize benefit, don't exceed weight
+		0-1 bc either accept or reject
+	can solve using math, where max sum of b subject to sum of weight less than Weight Capacity
+	Attempt 1: brute force, test all ways
+to define subproblems (key step): what is max value that can be got with weight less than/equal to w using first k items
+	basically looking for max benefit for limited number of items and weight
+	we keep looking for lower weight limit and max benefit
+	so recursive formula for subproblems looks at smaller weight over time, reducing the amount of items ur looking at
+	capacity still stays the same when item not added, and benefit doesn't change either
+	also need to consider if benefit is worth it, expecially for later items
+		max{reject, accept} else...
+		max{ B[k-1, w], B[k-1, w-(w_k)] + b_k]
+	 
+		
+
+
+
+
+

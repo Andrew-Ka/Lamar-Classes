@@ -1,0 +1,29 @@
+Got a curve on test, so now grade is 99?
+He is literally planning a recursive algorithm with our grades at this pt lol (not rly but funny lol)
+ask Trevor abt tweed and twine
+"Study for your future. Study for your family." -Dr. Zhang
+April 19 is drop date
+
+Last Time: 
+Dynamic Pgrming:
+	LCS, subsequence
+	recursive formula has 3 cases, 
+		either 0, 
+		they have the sequence, 
+		or max of one less of both
+	get smaller subproblem, find in table
+	know table
+	(i,j), i is row, j is column
+		(i-1, j) is same column, row above
+	DNA ex
+
+Now:
+ran thru LCS ex
+
+The Change Problem
+	its like the greedy algorithm
+	amount of money in least amount of bills
+	max benefit, but diff then the others cus we are finding the min
+	check highest, if works, then add one and subtract that denomination from the p cents
+
+not bad rly, find min
