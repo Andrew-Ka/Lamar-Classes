@@ -1,0 +1,46 @@
+Q: if io op is based on interrupt, when invoke read API
+	read driver save info somewhere in mem (maybe device status table), all info should be saved in device status table
+	after reading over, invoke interrupt handler
+		routine in kernel space
+	interrupt handler look up specific device handler which looks from device status table
+	ctrl then goes back to user space
+	advantage is not wasting cpu resources
+
+
+Q: ?
+	in comp, have many devices
+	if draw diagram w/ all devices and all API
+	for every routine for every device, should have piece of code
+	OS should have org sys to do so
+	solution to organize?
+	device independent function call (ch 5, slide 13)
+	if want to remove a device, all its routines should also be deleted
+	if adding new device, all its routines should also be added
+	need to change src code for pgrm to do those 2 things, and then recompile, relink, reload OS (harddrive to mem)
+	very hard, ez to make mistakes, so not practical
+	static (code already implemented in kernel), not good
+	need to make it dynamic
+	reconfigurable device drivers (ch 5 slide 15)
+	user space (box on right, the one that is 4 cells) and kernel space
+	just make new entry in user space for new device, dynamically load driver
+	same for delete, just delete entry from user space
+	linux has reconfigurable device drivers
+
+
+Q: ?
+	detect interrupt
+	check done bit of every device
+	every device has done bit
+	in cpu, has an interruptRequest flag bit, all device done bit connected to it
+	if any of the done bits are 1, than interruptRequest bit is 1
+	
+	interrupt should be atomic - have to finish one entire interrupt b4 going on to another interrupt
+	ch 8, transaction database, run all sql statements or none
+	race condition, intro another var - interruptEnabled (connect by &&)
+	now its ok to process interrupt, bc interruptEnabled set to false when if statement ran
+
+
+Q: ? blocking call? but lets wait on talking abt it
+	
+	
+	

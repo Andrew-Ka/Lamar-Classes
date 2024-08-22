@@ -1,0 +1,70 @@
+start w/ info abt all processes
+	ps -ef | less
+also command of
+	top
+does processes and ID's maintained by kernel
+	bc user shouldn't have access to all info
+
+in kernel space, there is process descriptor
+	has list of process
+	when process created, its info kept in this list (in the kernel space)
+	its a data structure
+	should also have thread descriptor
+	some examples in ch 6 slide 14
+	also ex for thread descriptors is in ch 6 slide 15
+	
+**don't mention windows lol
+
+linux calls ch 6 slide 21
+
+now abt transition diagrams
+	in state ready, all resources ready, just competing for cpu
+	when scheduled, process can use cpu, its now running
+	when process done, all resources are free'd
+	if request cannot be completed, then process is blocked
+		if request can be completed and it is running, then it just continues
+	blocked, process must wait until available (maybe)
+	when resources available, process goes back to being ready
+	for unix state transition diagram (ch 6 slide 25), more complex
+		includes states for I/O requests, where sleep cannot be interrupted, continue execution when I/O complete
+		sleeping is like block
+		tranced/stopped can be resumed - useful for debugging
+			for debugging, use additional debug info: -g -w
+			then use gdb ____ (__ is for the compiled file's name)
+			ps -ef | grep akalathra (shows all the processes for me, also do this in diff terminal)
+		also zombie is after done, where it waits by the parent, useful for parent to ctrl child processes
+			child tells parent its done, parent tells child to clean up, very small time in state
+	**forget windows yyyyeeeeee booii
+
+hardware process
+	loader runs a bunch of process, so sends to process manager
+	process manager shoots btwn processes and interrupt handler and itself
+	
+Context switching
+	executable mem = ram
+	shoot btwn process manager, processes, and interrupt 
+
+
+ch 7 stuff
+
+model of process execution
+	basically like the transition diagram, but put in parts
+	idea is to be fair to all the processes
+	this is for preempt 
+schedule
+context
+	for processes, address stored in list
+	all parts are on slide 6 (ch 7) for the cpu
+context switching is switch btwn old thread to new thread (old process to new process)
+mech to invoke scheduler
+	no talk abt voluntary call - its bad
+	involuntary call makes it fair
+		uses external forces (like timer)
+		timer is basic service in kernal space
+	discussion abt timer in 5 notes
+		also, we saw interruptRequest in ch4S
+	
+		
+		
+			
+	

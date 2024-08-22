@@ -1,0 +1,21 @@
+boolean c = TRUE;
+boolean d = FALSE;
+*a = c;
+*b = d;
+proc0(){
+	/*Enter the CS*/
+	swap(*a, *b);
+	while(! *a){
+		<CS for proc0>
+	};
+	swap(a*, b*);
+}
+proc1(){
+	/*Enter the CS*/
+	swap(*a, *b);
+	while(! *a){
+		<CS for proc1>
+	};
+	swap(a*, b*);
+}
+	

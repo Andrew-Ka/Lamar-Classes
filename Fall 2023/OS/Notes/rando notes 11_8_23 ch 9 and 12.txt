@@ -1,0 +1,104 @@
+ch 9
+dining philosophers
+	5 philosophers (P1-P5), btwn each philosopher there is a fork (f1-f5)
+	initially, every philosopher is thinking
+	later, one will want to eat
+	they are only allowed to eat if they can pick up both their left and right fork
+	if a philosopher cannot access both, must wait for the philosopher by it to finish eating
+	initial attempt
+		use semaphore to protect every forks
+		slide 9 fpr notation
+		
+	not good, deadlock
+	****might ask this on the exam, want specific example
+	try 2:
+		slide 20 & 21
+		use pickUpForks and putDownForks, lets 
+		use state of Hungry, Eat, and Thinking
+		test(i) tests the two forks if available
+		use to check status of philosophers on the sides as well
+		if all true, then can pick up the forks, state goes to eating
+		the signal is for later, when a process is blocked (when can't access both forks)
+		self[i].wait is to block the philosopher from eating, will join an array
+		when a philosipher puts down a fork, thats when signal becomes useful, 
+		to wake any process that couldn't use the forks that were being used by the philosopher
+		2 forks are available now, so need to run test 2 times
+	correct solution
+	use monitor btw
+	**don't memorize this code, will ask function of specific lines
+	
+ch 12 VM
+	we got RAM, memory is limited, but have to have a lot of processes
+	RAM runs OS, and has to do multiple processes
+	each process has a lot of space individually, can't load all of it into the RAM
+	divide RAM into blocks
+		in the RAM we call each block a frame
+	also divide the vm space of the process into the same size block
+		each block here is called a page, has the same size as the frame
+	allocate certain frames to certain processes
+	load current needed page from the VM to the frame
+	after while, need to load more info from VM to the RAM, gotta
+	unload a page in the RAM, and then load a new page
+	give limited number of frames to each process
+	need to decide which page needs to be removed
+	bind virtual address to physical adress 
+	binding is function of t, changes over time
+	when load page from vm to physical memory, just copy page
+	bc size of page is same as size of frame
+	when do address translation, do stuff
+		when do translation, need page number and line number
+		line number is like the local address in the page
+		map page # to the frame #, line # is just copied, that doesn't change
+	example from question, idk what slide
+		diff os supply diff size for vm
+		128 GB = 2^7 * 2^30 = 2^37, so need 37 bits to rep all the addresses
+		so 37 = g + h (the page # bits + line # bits)
+		page # size is 4096 B, so 2^12, 12 bits to rep each line
+		so h = 12
+		g = 25 then, so j = 25 as well
+		
+
+	demand paging algorithm
+		if page not in memory = page fault
+		mem manager has to locate the missing page
+		frame is unloaded (1 frame to hold new page), 
+		page loaded to that open frame
+		page table updated
+	page table?
+		in kernel, there is list of processes for which frames go to what
+		mem manager knows which page has been loaded in physical mem based on this
+	next part, discuss policies
+	ignore slide 13
+random replacement
+	slide 19
+	reference stream, only 3 frames for this process
+	load each individually , underline means page fault
+	want to reduce amount of page fault, use page faults to evaluate
+	13 page faults, thats not good
+Belady's Optimal Algorithm
+	max forward distance
+	use future knowledge to enhance program
+	on the slide, 3 has the largest future distance, so replace that
+	10 page faults, bad, but not as bad as b4
+	this is benchmark of best possible performance
+LRU
+	use the opposite of that ^, 
+	whichever is least recently used is replaced
+	16 page faults bruh
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		

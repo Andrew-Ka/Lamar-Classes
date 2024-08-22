@@ -1,0 +1,72 @@
+slide idk ch 8
+	P(mutex) and V(mutex) protect readCount
+	L4 increase readCount
+	check if readCount ==1 on L5
+		this to check if first reader
+		remember P decreases the val, V increases
+	while r1 is in L8, might have writer arrive
+	w run, L14, L15, L16 has to wait now, blocked at L16
+	r2 runs L1, L2...L4, L5, L7 readCount is now 2
+	r3 runs L1, ..., L5, L7 readCount is now 3
+	r1 runs L9, L10 readCount is now 2, L13
+	r2 runs L9, L10 readCount is now 1, L13
+	r3 runs L9, L10 readCount is now 0, L12, L13
+	w can now go in
+	last reader sets writeBlock back
+
+how to implement P() and V()
+	so far, assume the (concept) kernel provide the P and V to user lvl processes	
+	assume pc gives hardware TS (realistic assumption) atomic hardware instruction, meaning Test and Set
+	hardware will make sure there is no interrupt
+	atomicly set the slot of m in memory to the register, then set that memory slot to true
+	kernel will utilize TS to implement P and V
+		do this by:
+		while(TS(s)) ;     is same as        P(s) ;
+		s = false;	   is same as	     V(s);
+		boolean s = false; is same as        semaphore s = 1;
+	this is binary semaphore (kinda limited)
+	can also make general semaphore
+	implementing this is a beast, here we go (example time)
+		2 fn's (P and V)
+		lets say initial val = 2
+		P1 * p
+			L1 - while(...) //not block P1
+			L2 - s.value--  //value is now 1
+			L3 - if(s.value < 0)   // since value is 2, we can allow 2 processes to go through, so this is false
+			L6 - s.mutex = false // we skip here bc its an if else stmt
+		P2 * p
+			L1 - while(...) //not block P1
+			L2 - s.value--  //value is now 0
+			L3 - if(s.value < 0)   // since value is 2, we can allow 2 processes to go through, so this is false
+			L6 - s.mutex = false // we skip here bc its an if else stmt
+		P3 * p
+			L1 - while(...) //not block P1
+			L2 - s.value--  //value is now -1
+			L3 - if(s.value < 0)   // since value is 2, we can allow 2 processes to go through, so this is true
+			L4 - s.mutex = false // we go here bc its an if else stmt
+			L5 - while(TS(s.hold)); //this is while true loop, so P3 is blocked here
+		P4 * p
+			L1 - while(...) //not block P1
+			L2 - s.value--  //value is now -2
+			L3 - if(s.value < 0)   // since value is 2, we can allow 2 processes to go through, so this is true
+			L4 - s.mutex = false // we go here bc its an if else stmt
+			L5 - while(TS(s.hold)); //this is while true loop, so P4 is blocked here
+		P1 * v (after its done, u run this)
+			L7 - while() //false, so move on
+			L8 - s.value++; //so value is now -1
+			L9 - is(s.value <= 0)  //this is true
+			L10 - while(!s.hold) //this resets will talk abt this later, hold is true, so we skip out of this while-true loop
+			L11 - s.hold = False //this will wake up P3
+		P2 * v
+			L7 - while() //false, so move on
+			L8 - s.value++; //so value is now -1
+			L9 - is(s.value <= 0)  //this is true
+			L10 - while(!s.hold) //this resets will talk abt this later, hold is true, so we skip out of this while-true loop
+			L11 - s.hold = False //this will wake up P4
+						
+what if we take off L10?
+	this would make it so that only 1 Process will be woken up to run the p
+	so we get stuck, prevent continuous P operation
+	we get smth like VVP instead of VVPP bc P will make 
+
+

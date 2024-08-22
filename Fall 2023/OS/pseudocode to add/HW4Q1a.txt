@@ -1,0 +1,23 @@
+P0:
+	disableInterrupt();
+	<use V2>
+	enableInterrupt();
+
+P1:
+	disableInterrupt();
+	<use V2>
+	enableInterrupt();
+	disableInterrupt();
+	<use V0>
+	enableInterrupt();
+P2:
+	disableInterrupt();
+	<use V0>
+	enableInterrupt();
+	disableInterrupt();
+	<use V1>
+	enableInterrupt();
+P3:
+	disableInterrupt();
+	<use V1>
+	enableInterrupt();

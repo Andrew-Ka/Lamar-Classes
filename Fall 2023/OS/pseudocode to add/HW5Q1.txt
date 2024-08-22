@@ -1,0 +1,52 @@
+monitor {
+	struct V0, V1, V2;
+	boolean busyV0, busyV1, busyV2 = FALSE;
+	condition V0use, V1use, V2use;
+public:
+	p0(){
+		if(!busyV2){
+			V2.wait();		
+		}
+		busyV2 = TRUE;
+		//V2 operation
+		busyV2 = FALSE;
+	};
+	p1(){
+		if(!busyV0){
+			V0.wait();		
+		}
+		busyV0 = TRUE;
+		//V0 operation
+		busyV0 = FALSE;
+
+		if(!busyV2){
+			V2.wait();		
+		}
+		busyV2 = TRUE;
+		//V2 operation
+		busyV2 = FALSE;
+	};
+	p2(){
+		if(!busyV0){
+			V0.wait();		
+		}
+		busyV0 = TRUE;
+		//V0 operation
+		busyV0 = FALSE;
+
+		if(!busyV1){
+			V1.wait();		
+		}
+		busyV1 = TRUE;
+		//V0 operation
+		busyV1 = FALSE;
+	};
+	p3(){
+		if(!busyV1){
+			V1.wait();		
+		}
+		busyV1 = TRUE;
+		//V1 operation
+		busyV1 = FALSE;
+	};
+};

@@ -1,0 +1,79 @@
+1. What is context?
+Things in CPU
+
+2. RR lead to starvation?
+False, all gets chance to run
+
+3. many devices connected to computer. Which finish reading/writing (code)
+check the done bit
+use for loop to check done bit of every device
+
+4. supervisor mode, can access all mem locations
+true
+
+5. 
+a. state diagram, traced or stopped state example
+debug
+
+b. when process becoming sleeping?
+request can't be satisfied
+
+6. in code, read() can be non-blocking
+false, if its nonblocking, if x unavailable, it will go back to the system
+
+7. 
+a. Parent.c pgrm, how many times L15 run?
+2 times
+
+b. L8, what is ppid()?
+it will be shell pid
+
+8. device independent and dependent, figure, example?
+read, write, open, close, all those acceptable, even API - these independent
+dependent would have driver
+
+9. data structure for OS for the processes
+process descriptor
+
+10. 
+a. purpose of step 5?
+process complete, invoke the interrupt
+
+b. step 3?
+device is idle, able to do the command
+
+c. have psuedocode, what step (check bits to check if idle)?
+step 2
+
+11. 
+a. write the code, 2 threads (T1 and T2) T1 computes 1 + 2 + 3... + 100, and T2 computes 101 + 102 + ... + 200
+
+T1_funct(){
+	for loop 1 - 100
+}
+T2_funct(){
+	for loop 101 - 200
+}
+main(){
+
+	pthread_create(T1, T1_func());
+	pthread_create(T2, T2_func());
+
+	pthread_join(T1);
+	pthread_join(T2);
+
+}
+
+b. name of compile the code
+gcc mythread.c -o mythread -lpthread
+
+
+
+
+
+
+
+
+
+
+

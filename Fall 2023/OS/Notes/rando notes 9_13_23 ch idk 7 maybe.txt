@@ -1,0 +1,54 @@
+save context of old process, then put in new context in (for cpu)
+threads
+save cpu state thru saveprocessstate();
+then invoke correct device handler
+if device just finish reading, bit is 01 (done bit is 1)
+use for loop to detect which device becomes done (for done bit)
+
+
+
+pseudo code show interaction btwn certain components
+polling based IO op ch slide
+	read(), 
+	2. then wait for device to be idle, check busy and done bits
+	3./4. read/write or whatever the command
+slide 19 ch 4
+	2. while busy bit is 1 or done is 1, device isn't idle, just wait
+	software is driver
+	3. put command to reg
+	4. while its busy, its writing
+	hardware as well
+	5. wait for data to copy to register
+	turn busy -> 0, done -> 1
+
+
+now ch 5
+
+device dependent and independent
+ctrl
+overlapping op of device and CPU
+blocking and nonblocking
+	ch 5 slide 8
+	on left, read must be blocking
+	if data is not available yet, must block (to wait), otherwise return wrong val
+	
+	on right, device read
+	other code btwn that doesn't use x
+	overlap use of CPU and device (read for device, ... for CPU)
+	right b4 using x, must wait for reading to be over
+		use while loop to check if stillReading();
+	so this is nonblocking 		
+ex of nonblocking.c
+	try read from keyboard (that what 0 means from read(0...
+	nonblocking is attribute of api
+	set_fl is a function, sets attribute to nonblock
+	everything in linux is files (0 = keyboard, also a file)
+	fcntl controls file, F_GETFL gets current attribute
+	just want to do bitwise or to change the bit tat ctrl non-blocking/blocking attribute
+	bitwise or used for 
+	val |= flags is same as val = val | flags, so bitwise or to just change that 1 bit
+so nonblocking is just continue, w/ or w/out data
+app is for cpu, io is for device (ch 5, slide 9)
+parallel, efficient
+disk optimization 
+midterm will be ch 1 - 7

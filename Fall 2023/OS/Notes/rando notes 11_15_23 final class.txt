@@ -1,0 +1,103 @@
+first finish VM, then do final review
+ch 12
+	talked abt LRU
+		3 frames, but lost of faults
+		increase frames, less faults, dramatic improvement
+	FIFO - so page been in memory the longest is removed first
+	
+	EX of stack algorithms to compare LRU and FIFO (slide 12-40)
+		3 vs 4 frames, 
+		largest backward difference
+		FIFO and LRU diff
+		looking (comparing) LRU and FIFO at 4 frames
+		LRU has 'backward distance', FIFO just is whatever was in the longest
+	
+	1 interesting observation: beladay's anomoly
+		compare no. page faults btwn 3 and 4 frames (use FIFO as example)
+		we got 10 page faults for 4 frames, only 9 faults for 3 frames, why?
+		thats why its an anomoly
+		so the anomoly (in virtual memory) is that as the number of frames increase, so does the page faults 
+	FIFO is not well behaved (not stack algorithm)
+		anomoly happen for this
+	LRU is well behaved	
+		anonmoly WILL NOT happen here
+	inclusion property - page loaded at time t with m is also loaded at time t with m+1
+		so when increasing frames, the og will always be a subset of the one with the increased frames
+		so like the pages in the 3 frames will always be a part of the pages in 4 frames
+
+	number of frames is static
+	but can also have dynamic no. of frames, depending on behavior of process
+		based on modern solution
+		window is parameter
+			window is a numb, tells how many frames to store (like in an array)
+		just count how many diff pages we have in the window, then allocate by that
+		assume window size is static (in real probably not)
+		slide 12-50 and other examples
+			using LRU and window size = 3, not good enough, have to keep on having more, 
+			switching window to 4, got better
+	so its very important to have correct window size, otherwise will get thrashing
+		thrasing is too many page faults
+		how to choose w is hard, skip
+	this is all abt working set
+	and this is all paging based vm	
+	last part: segment based vm (slide 12-56)
+		basic idea
+		virtual address, have segment and offset
+		map segment and offset, based on mapping, can 
+		binding changes over time
+		binding, maintain info abt segment in segment table
+		key part is offset compared to Limit
+			offset must be smaller than the limit, address must be inside the segment
+			if offset greater than limit, will get segmentation error, bad
+			if less than, then base address goes to realocation, which adds offset to mem address register
+	so thats it
+
+
+FINAL EXAM STUFF!!!!!!!!!1
+ch 8, 9, and 12
+ch 8 - basic synch
+	critical section problem, deadlock, p & v, implementation as well
+	slide 8-8
+	skip 13-15
+	know semaphore, requirement, definition
+	p and v, and how used to solve problem
+	how to sych
+	know the reader writer problem, how to use monitor instead of p&v (ch 9 actually)
+	advantage of solution (will write example on paper, just answer the questions abt it)
+	example based
+	know the weaknesses
+	test and set, binary and general semaphore
+ch 9
+	monitors and conditional vars
+	solve diff problems
+	dining philosophers problems
+	why have deadlock when not using monitor (slide 9-9, give ex on test)
+	whats wrong in reader writer (slide 9-15)
+	
+ch 12
+	page based vm
+	address translation
+	diff policies
+	working set
+	segmentation
+	this is mainly concepts
+the coding questions
+	simple questions based on assignments, know the basic structure
+	like pseudoced, including the API's
+	structure of the code
+	project based on shell (from the project)
+
+in final exam, u need to read question first, then answer, don't just memorize and answer something 
+if question need example, give an example
+
+FOR PROJECT
+	skeleton is given
+	parse
+	2 parts of project
+	change fork to pthread.create()
+
+		
+
+		
+		
+		

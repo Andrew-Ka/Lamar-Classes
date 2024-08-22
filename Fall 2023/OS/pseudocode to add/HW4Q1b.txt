@@ -1,0 +1,26 @@
+semaphore semV0 = 1;
+semaphore semV1 = 1;
+semaphore semV2 = 1;
+P0:
+	P(semV2);
+	<use V2>
+	V(semV2);
+
+P1:
+	P(semV2);
+	<use V2>
+	V(semV2);
+	P(semV0);
+	<use V0>
+	V(semV0);
+P2:
+	P(semV0);
+	<use V0>
+	V(semV0);
+	P(semV1);
+	<use V1>
+	V(semV1);
+P3:
+	P(semV1);
+	<use V1>
+	V(semV1);

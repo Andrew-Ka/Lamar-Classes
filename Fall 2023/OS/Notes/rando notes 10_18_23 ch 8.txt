@@ -1,0 +1,75 @@
+how synch process
+concurrent
+
+all diff processes to run, but will run across critical seciton
+	its like an intersection
+	processes uncontrolled will colide
+critical sections
+	shared var
+	2 processes share it
+	both modify the var, and both scheduled
+	look at high lvl lang in assembly
+	includes loading the var from mem to cpu and the instruction
+		in example, load balance and add is the instruction
+		also, sub is the other process instruction
+	Interrups are inconvenient, dynamic, don;t know where they happen
+	context saved for process
+	when switch processes, context will stay original, the var will be modified individually, but not dynamically
+	this bad, bc will restore var's that we may have changed
+	so shouldn't allow interrupts bc the shared var is the critical section
+	some code must be atomic (done at all together, run all or run none)
+
+Mutual exclusion
+	only one process can be critical section at a time
+	there is race to execute the critical section (the shared buffer)
+	if no mutual exclusion, result isn't determinate, we want determinate answer
+	support of OS to do issue
+Disable interrupts
+	each process diable interrupts when starts
+		Breaak: how we analyse  a solution
+			correct or incorrect
+	so yes, it solves race problem
+	but, it can stop all other processes, dangerous bc can destroy kernel
+	so OS shouldn't give disableInterrupt (the api) to user lvl processes
+	need different solution
+Lock Var - no
+...
+no
+
+
+Transactions
+	list of operations
+Semaphore
+	P() and V()
+	ctrl access of shared buffer - like a traffic light
+	OS gives 2 API's to user lvl processes - P() and V()
+	how does OS design and implement P() and V()
+	definitions
+		V(s) : [s = s + 1]
+		P(s) : [while(s == 0) {wait}; s = s - 1]
+		semaphore is a nonnegative integer
+		[] means atomic process, cannot divide the process
+		in P() gotta wait till s > 0 to do operation
+	balance problem (same as b4)
+		2 processes, have semaphore var named mutex
+		run P0 * P(mutex) - so now mutex now == 0
+		P0 now free to run using the critical section until V(mutex)
+		P2 will run till P(mutex), will have to wait till mutex = 1, which won't happen until process 1 does it (unless they flipped)
+	we got solution template for canonical problem
+		mutex = 1
+		use P() and V() to protect critical section
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+...
+while((busy) || (!done)){//status reg. made of busy and done bit
+	wait();
+}
+//after this, device status should be 00 (idle)
+//continue to step 3
+...

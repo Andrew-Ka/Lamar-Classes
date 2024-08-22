@@ -1,0 +1,24 @@
+procA() {
+	while(TRUE){
+		<compute section A1>;
+		update(x);
+		<compute section A2>;
+		retrieve(z);
+	}
+}
+procB() {
+	while(TRUE){
+		<compute section B1>;
+		update(y);
+		<compute section B2>;
+		retrieve(x);
+	}
+}
+procC() {
+	while(TRUE){
+		<compute section C1>;
+		update(z);
+		<compute section C2>;
+		retrieve(y);
+	}
+}

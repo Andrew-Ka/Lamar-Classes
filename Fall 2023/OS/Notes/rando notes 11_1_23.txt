@@ -1,0 +1,112 @@
+Deadlock (ch 8)
+	clide 8 - 38
+	issue in kernel space
+	shared data
+		list - array, lets say L
+		int length, initial it is 0
+	P1 and P2 
+	when P1* , P1 inserts data
+	lets say P1* (one more time, length = 2)
+	P2* , P2 deletes data
+	P2*
+
+	since 2 shared parts, need 2 semaphores
+		P(s1), V(s1), P(s2), V(s2)
+	
+	ex execution
+	length = ...	
+	P2* L8, L9, Interrupt
+	P1* L1, L2, L3, Interrupt
+	P2* L10, held at L11 bc needs to run P(s1), but can't
+	P1* blocked at L4 bc needs to run P(s2)
+	no process able to make any further progress = deadlock
+	
+	how to solve?
+	treat critical section parts as 1 shared data
+	so like both length and the list as 1 shared data
+	use 1 semaphore (assume max list is 10000):
+
+	semaphore s = 1;
+	shared list L;
+	shared int len;
+	P1(){
+		P(s);
+		if(len >= 1){
+			Delete from L;
+			Len--;
+		}
+		V(s);
+	}
+	P2(){
+		P(s);
+		if(len < 10000){
+			Insert into L;
+			Len++;
+		}
+		V(s);
+	}
+
+Q: use monitor to solve the problem (in review questions), P1 and P2 access shared info 
+	monitor is like what P/V is for assembly but for high lvl lang
+	powerful primitive
+
+ch 9
+	monitors: data structure (ADT), only 1 process can be executing in the ADT at a time
+	ex: shared balance
+		monitor is keyword
+		monitor sharedBalance{
+			double balance;
+		public:
+			credit(double amount) {balance += amount;};
+			debit(double amount) {balance -= amount;};
+			...
+		}
+	P1 and P2, P1 is credit, P2 is debit, when doing context switches, can't overlap
+	monitor guarantee only process runs in that part
+	ex:
+	monitor myMon{
+		shared list L;
+		shared int len;
+		int maxLen = 10000
+		delete(){
+			if(len >= 1){
+				Delete from L;
+				Len--;
+			}
+		}
+		insert(){
+			if(len < maxLen){
+				Insert into L;
+				Len++;
+			}
+		}
+	}
+P/V and Monitor are big in the final exam
+	ex read/writer problem, but using monitors now:
+	clide 9-14
+	4 public member functions
+	design and implement those 4 member functions
+	ex implementation of them
+		r1* L1 (while loop to wait), L2 (reader++, r1 is in the shared buffer)
+		w1* L4 (writer++), L5 (busy is for any writers, initially false, this is a while true loop, blocked)
+		r2* L1(while true loop, blocked)          **********wrong now, Monitor won't allow more r's to run, we have a deadlock now
+		r1* finishes part, L3 (finish)
+		w1* L6, now in shared
+		w1* finish, L7, L8
+		r2* goes on
+	this ended in deadlock, but for different issue, if r1 is stuck, it will run forever
+	don't use while true loop in monitor, will cause deadlock
+	final shot: condition variable
+		an event in kernel space, 3 var defined (slide 9-18):
+			wait: suspend invoking ...
+			signal
+			queue
+	another try (its correct, using monitor and condition variable, slide 9 - 19):
+	no while loop
+		r1* startRead(), L1 (use okToWrite, its a signal), L3 (reader++), L4 (okToRead) 
+		w1* startWrite(), L8, L9
+		r2* startRead(), L1, L2 (wait()),
+		r1* finishs, finishRead(), L5 (reader--), L6, L7 (send signal to okToWrite) 
+		w1* finish, finishWrite(), L11, L12, L13 (signal to okToRead)
+	its good, don't starve write processes, and no deadlock, signal allows release, signal as process communication
+	in exam, try to write the example out

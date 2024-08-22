@@ -1,0 +1,26 @@
+/*
+*Use xRead() in an application to
+*continue processessing, but be 
+*able to block self b4 using data 
+*in the process of being read
+*/
+
+...
+//assume there is device called D
+exampleFn(){
+	...
+	int ID; //get ID of D
+	int hold; //hold a certain sequence of the ID
+	int status;
+	xRead(ID, status);
+	while(stillReading());
+	//where stillReading() is a fn that checks status, 
+	//loops until it has stopped reading
+	hold = fnX2(ID);
+	...
+}
+fnX2(int){
+	//does something
+}
+
+...

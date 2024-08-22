@@ -1,0 +1,142 @@
+understand all components of system and how they work together
+	like scheduling
+	context and context switching
+don't need voluntary call, just involuntary calls
+	so no slide 11 (ch 7)
+	but will be slide 12
+scheduling for particular concepts and their waiting times
+	FCFS (first come...)
+	SJN (Shortest job next)
+	priority based (and starvation)
+	deadline scheduling
+	All these were preemptive, but what about non-preemptive
+	like Round Robin (turn around time)
+	this ^ w/ context switch (so with overhead), more realistic
+	multilvl queue (priority and round robin mixed)
+		understand, don't just mem :)
+
+ch 6 stuff
+implement process and thread
+process abstraction
+every process has its own abstraction
+Process manager
+	typical API OS gives to user application
+	only focus on LINUX
+tracing hardware process
+	load kernel
+	run process via process manager and interrupt handlers
+	interrupt and higher priority
+	context switch
+process descriptors
+	data structure
+	keep data abt processes
+	this will change all the time, bc OS
+	just give some info abt PD (proc.. desc..)
+thread descriptors
+	same idea, but for threads
+no windows
+only UNIX/LINUX
+	what happen when try to quit process
+don't need to know all LINUX sys calls
+know state transition diagrams
+	running, sleeping, blocked, done, ..., interrupt, ... other stuff
+	pracatical has lots of states
+generic resource manager
+	slide 6-29 is general, know it
+	OS is a resource manager, handles all resources in computer
+
+ch 5 stuff
+device dependednt and independent
+	this is for device management org
+	diff device driver, OS try hiding all details to make ez for user
+	this ^ is what API is basically
+overlap op of device and cpu
+	blocking vs non-blocking
+	have to make reading is over right b4 using x, so know when to use blocking and non-blocking call
+	I/O has its own op, so 
+need to focus on Polling I/O ************************
+and the other I/O stuff
+device independent fn call
+	read, write, ...
+	how to handle all the api
+concept of reconfig device drivers
+	weakness of device independent fn call, and how this is useful
+handling interrupts
+	device communications
+	diff implementations to handle interrupt
+	first may use memory, second might not
+know concepts of seek time
+	all the look, scan, ... ALL
+
+ch 4 stuff
+pgrm specification
+	high lvl lang, assembly, then machine lang
+	architecture
+	ALU (?)
+fetch and running instructions
+	know this, its just comp arch
+device controller interface (DCI)
+	status of device, like IDLE, FINISHED, WORKING
+	00, 01, 10
+ctrl unit w/ interrupt (Hardware)
+	interrupt has higher priority
+	search which device done reading, using for loop and done bit
+know how to read psuedocode
+know race condition
+	interrupt and finishing interrupts in order
+	thats why we have interruptEnabled, set it false when have first interrupt, then set back when done with that interrupt
+	allow interrupts to finish b4 interrupting
+polling based read and write
+	know the basics of the pseudocode
+	software and hardware slide
+	software is driver, using done bit to know status
+	hardware
+hardware connections, bit in cpu for interrupt
+no bootstrapping and on
+
+ch 3 slides
+user and kernel processes
+privilege of kernel and user processes
+	use fork (that user)
+	its trapped, which then goes to kernel process
+	so trap is like pointer (trap is in trap table in the kernel), the trap points to specific thing
+	trusted and not trusted
+basing os org
+	all the managers (file, mem, device, threads..
+
+ch 2 slides
+process w/ multiple threads
+	share data in processes
+ex on slide 18 (ch 2)
+	for each part, probably know basics of them
+pgrm and process
+	pgrm is static
+	process is dynamic, dependent on scheduler of OS
+	diff executions of pgrms, depends on OS
+UNIX only 
+	basic API's, know them ******
+	fork
+	simple coding projects, will be on test
+
+
+ch 1 stuff
+abstraction, abstract machine
+	w/ help of OS
+
+
+
+In total, "don't just memorize"
+if do assignment, this test should be ex
+	final will be hard bc ch 8, 9, and 10
+understand the pgrms in all the assignments
+when have the test
+	don't write too much
+	questions are designed to only need brief answer
+9 questions (?) all short answer
+
+	pthread and other pseudocode stuff
+	name of api's
+	don't need arguments, but if the argument is used, might wanna include it (yikes :( )
+	should have correct structure, routine
+	like separate functions, needed
+	

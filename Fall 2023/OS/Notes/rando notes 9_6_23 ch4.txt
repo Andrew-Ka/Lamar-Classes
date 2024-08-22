@@ -1,0 +1,34 @@
+computer org
+pgrm specs
+	src and assembly
+	src to assembly ex.
+Machine language
+	assembly to machine (no, its binary)
+The ALU
+	basic op
+Control Unit
+	fetch unit
+	decode unit
+	execute Unit
+	PC = program counter
+	IR = Instruction
+Control Unit Operation
+	Fetch phase and execute phase
+	PC = start address
+	IR for instruction
+	run/execute(IR)
+	fetch new instruction from mem in PC
+Primary Mem Unit
+	read op, go from read/write
+Ctrl Unit w/ Interrupt (Hardware)
+	everywhere in computer
+	do important processes
+	when reading, polling is bad for CPU bc its precious resouces
+	when device finishes reading, just interrupt so CPU can go back to that, otherwise use CPU for smth else
+	InterruptRequest, if true, PC goes to certain location in memory, interrupt handler
+	context switch-switch context from current to interrupt
+no Direct or Addrewss
+we do ch 5 concept in a bit
+Device Driver Interface
+	have termianl driver & ctrller, other device drivers and cntrlers
+	just wann remember 1 API, like write, device interface (given by OS)

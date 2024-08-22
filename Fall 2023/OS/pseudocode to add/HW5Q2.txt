@@ -1,0 +1,14 @@
+monitor example{
+	semaphore var1 = 1;
+public:
+	function1(){
+		P(mutex);
+		<processing for function1>;
+		V(mutex);
+	};
+	function2{
+		P(mutex);
+		<processing for function2>;
+		V(mutex);
+	};	
+};

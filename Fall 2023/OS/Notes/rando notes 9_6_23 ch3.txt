@@ -1,0 +1,22 @@
+kernal/root process
+user-untrusted
+vs trusted process
+diff process have diff privalage
+	OS|-> fork parent:process
+	invoke fork when want that parent process
+process table, 
+when process
+how to enter new process into table?
+	can't do directly, might cause harm to OS
+	limit process, protect the kernel, if kernel process wrong, sys stuck
+	
+
+
+OS is overhead fn, does all scheduling, resource manager, serve user level manager
+Trusted/untrusted
+4 basic fns of OS
+	device management, ...
+Kernel
+	trap switch user mode to supervisor mode
+thread performing a sys call
+no windows
