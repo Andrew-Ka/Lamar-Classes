@@ -1,0 +1,17 @@
+Discussion Board of Lesson 6
+
+1. Why do you think written documents require more attention than speeches?
+
+	Speeches are given in a more "human" manner, where factors such as body tone, voice control, speed and articulation, at the mercy of the speaker. When written documents are composed, the writer must make the document presentable and easy to understand to a wide range of audiences with limited control as to how they ingest the information. This may take the form of emphasizing one thing more in a speech through a more drawn out and verbally emphasized point, or in writing more of a subject and using graphs and images to drive the point home.
+
+
+2. It is said that the font that you choose to write a document defines its author (e.g., Times New Roman, Courier, Calibri). Is it true? What do you think? Give reasons.
+
+	I disagree that the font of the document defines the author, but rather the author's view's on the document. A document that is important, such as an job application or resume, is typically written in fonts such as Times New Roman or Arial. This emphasizes the desire for the document to be taken seriously as intended by the author. Other documents, such as emails or texts, can be written in fonts such as Roboto or even Comic Sans, which may denote a light-hearted or more conversational manner. Yet other documents, such as notes, can be written in fonts like Courier New, which is monospaced and helps keep formatting simple and easy.
+
+
+
+3. What do you think about auto-correctors in Microsoft documents or cellphones? Do you agree that they create a dependency to the software tool? Give reasons.
+
+	Auto-corrector have become key in many writing or text-based software. I would not consider us more dependent on these software, but rather more akin to using them. They are not necessary to have, and we will still catch basic errors upon proof-reading, but the use of them makes our writing much easier and natural. Taking this a step further, however, tools such as Gemini, Rewrite, and Grammarly all utilize AI to rewrite portions of documents in the specific context they are in. This is not studied so far as these are novel technologies, but I hypothesize that over-utilization and creating dependencies on these tools will create poorer writers.
+

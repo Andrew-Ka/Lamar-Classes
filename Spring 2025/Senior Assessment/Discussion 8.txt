@@ -1,0 +1,27 @@
+1. When it is recommended to write a descriptive abstract as opposed to an informative abstract?
+
+* Descriptive abstracts are commonly used when the conclusion or ending results are not as important as the content in the document. It more informs the reader and provides following steps. The focus of these abstracts are on the intended audience, the purpose, and then some methods and results.
+* Informative abstracts are more thorough, where the results and methodology are the main portion of the document. It does more to show rather than tell about the document. The focus of these abstracts are on the thesis/purpose, the scope of the methods and results, and then recommendations for following studies on the topic (later proposed research topics).
+
+
+2. It is believed that a figure values a ‘thousand words’. Why? 
+
+* A figure can better explain abstract concepts easier than a description. A description would have to take a paragraph to explain a concept as understandable as possible to a varied audience, but a figure can set the reader at ease as they can understand and work their way through the figure. This can be seen in describing an algorithm, let us say for example, quick sort:
+From Geeks for Geeks:
+(Insert Image)
+
+vs 
+
+From Geeks for Geeks:
+
+QuickSort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array. QuickSort works on the principle of divide and conquer, breaking down the problem into smaller sub-problems.
+
+There are mainly three steps in the algorithm:
+
+Choose a Pivot: Select an element from the array as the pivot. The choice of pivot can vary (e.g., first element, last element, random element, or median).
+Partition the Array: Rearrange the array around the pivot. After partitioning, all elements smaller than the pivot will be on its left, and all elements greater than the pivot will be on its right. The pivot is then in its correct position, and we obtain the index of the pivot.
+Recursively Call: Recursively apply the same process to the two partitioned sub-arrays (left and right of the pivot).
+Base Case: The recursion stops when there is only one element left in the sub-array, as a single element is already sorted.
+...And it goes on (https://www.geeksforgeeks.org/quick-sort-algorithm/).
+It is clear by this example that a figure can help more than words simply can in some scenarios. 
+

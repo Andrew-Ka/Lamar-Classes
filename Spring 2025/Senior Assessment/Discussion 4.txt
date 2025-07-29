@@ -1,0 +1,52 @@
+Discussion Board of Lesson 4
+
+1. What are the best approaches for meeting the audience’s needs?
+
+•	There are three main methods of approaching the audience’s needs. As an example, let us look at a scenario to apply these methods: 
+o	Scenario: At a major financial company, we are trying to let our clients know about major transactions that happen in accounts that relate to them. We need it to be secure, safe, reliable, and easy to understand. The presentation we are giving them needs to be catered to the audience to help them understand what is going on.
+o	Method 1: The Google Approach
+	In this method, you would do a general google search to see if possible solutions already exist. This is great to get a grasp on what is out there, but has potential downsides, such as just seeming like a report written in various formats and just not being personal.
+	In applying this to the scenario, this would look like giving what current methods are out there. A successful usage of this would be pointing out the pros and cons of each service and engaging the audience to what is suitable for them (demographic and personal desires).
+o	Method 2: The Clinical Approach
+	This method is straightforward, just stating facts with no excess knowledge. The focus is clear and accurate information. The downside of this is the bland presentation that may put audiences to sleep.
+	Application in this scenario would just be stating what the company desires to do, how long it will take, what the expected cost of the project is, and other straightforward facts.
+o	Method 3: The Audience-Geared Approach
+	This method is meant to actively engage the audience, taking into account who they are and retaining their attention.
+	This method includes facts and questions, encouraging the audience to engage in what they want from the application and giving them precise and satisfying answers for the account application.
+
+
+
+
+2. What are the best ways to keeping the audience interested in your talk?
+
+•	Accurate and Relevant Title – The title itself should make the reader want to pick up and read what your are talking/writing about. This, however, needs to be accurate. 
+o	Ex: Converting a title from “CNN Models in Medicine” to “Using AI Models to Analyze and Detect Anomalies in Patient Data”
+•	Intriguing Information – Focused for documents, starting with intriguing information/data keeps the reader on their toes, making sure they aren’t just passively reading.
+o	Ex: “About 50% of misdiagnosis occur due to incorrectly acquired or inputted data”
+•	Envision a Live Conversation – Writing like you are having a conversation allows the reader to better adjust and engage with the content, even encouraging the reader to have a conversation with the text.
+o	Ex: “Though you may be thinking this is due to simple machine errors that can be easily corrected, much of the time, this comes from far worse scenarios…”
+•	Cover the Basics – You don’t want a reader/audience to feel like they have just been dropped into a passage. By covering the basics, you will provide the relevant background context to the upcoming material. 
+o	Ex: “CNN models are known for image analysis. In fact, out of all applications, utilization for medicine practically relies on these types of models.”
+•	Add humor or pictures – This lets the audience step back from just raw text. This encourages engagement.
+o	Ex:
+•	Lighten Up – Information sticks more in an entertaining and relaxed setting.
+o	Ex: “Great news about AI is that it doesn’t have feelings! It’s great because we really train it off some horrifying stuff …”
+•	Start Strong – Starting the paper/presentation strongly keeps the reader engaged from the beginning, leading to less of the audience being lost or confused.
+•	Keep Audience Comfy – For oral presentations, check if everything is set.	
+o	Ex: Comfortable temperature
+•	Speak Up – A small voice will produce a small reaction; a loud voice will give a large reaction.
+o	Ex: Self explanatory
+
+
+
+
+
+3. What are the main techniques to overcome the barriers of written communications?
+
+The main techniques to have effective written communication include the following:
+* Using a simple to read format. - This helps with clarity, format, and reading fatigue. With a simple-to-read format, the reader will easily be able to recall and engage with the content.
+* Including Diagrams and Images - This will help clarify information. Rather than having to describe a process, an image will able to concisely show everything needed. Alongside clarity, this will prevent reading fatigue.
+* Concise writing - This will stop information overload. By presenting just what is necessary, you allow the reader to digest what they need and apply it to what they may already know. This will also help with limited time (smaller content) and clarity (no fluff, just the information that is needed).
+
+
+
