@@ -1,0 +1,122 @@
+Discuss how the definitions of 2NF and 3NF based on primary keys differ from the general definitions of 2NF and 3NF.
+* By primary keys:
+	* 2NF is described as both 1NF and non-prime attributes being fully functionally dependent on the primary key
+	* 3NF is described as both 2NF and no non-prime attribute is transitively dependent on the primary key
+* By general definitions: 
+	* 2NF is described as containing no partially dependent attributes on any key in the relation
+	* 3NF is described as every non-prime attribute of R containing fully functionally dependency on any key of R as well as non-transitivity dependency on any key of R
+* We can see that the main difference seen is how the attributes relate to the primary key as well as other attributes.
+	* In 2NF, we can see that the primary key definition focuses on how the attributes must fully depend on all attributes of the key. The general definition is broader, seeing that there is still no partially dependent attributes.
+	* In 3NF, we can see that the primary key definition focuses on transitivity in relation to the primary key. The general definition is more specific, given two conditions that basically set up 2NF and the primary key portion of 3NF.
+
+An example of the 2NF definitions would be as such:
+	Relation: {_A_, _B_, C, D}
+	FD: (A,B --> C); (A --> D)
+	Non-2NF for Primary: This is not in 2NF as NOT every non-prime attribute is fully functionally dependent on the primary key.
+	Non-2NF for General: This is not in 2NF as there is a non-key attribute (D) in the relation that IS partially dependent on a key in R (A).
+
+An example of the 3NF definitions would be as such:
+	Relation: {_A_, _B_, C, D}
+	FD: (A,B --> C, D); (C --> D)
+	Non-3NF for Primary:  This is not in 3NF as there IS a non-prime attribute that is also transitively dependent on the primary key.
+	Non-3NF for General: This is not in 3NF as though every non-prime attribute has a full functional dependency on any key of R, there is transitive dependency on a key.
+
+
+Discuss what are the two major components of SQL and what function do they serve? 
+
+* The two main components are the Data Definition Language (DDL) as well as the Data Manipulation Language (DML).
+	* DDL includes statements to define the data or database
+		* Examples of these statements include CREATE TABLE, DROP TABLE, ALTER TABLE, and RENAME TABLE
+			CREATE TABLE STUDENTS(
+				FNAME	VARCHAR (15)
+				LNAME	VARCHAR	(15)
+				MAJOR	VARCHAR	(15)
+				ID	CHAR	(10) );
+	* DML includes statements to manipulate the data
+		* Examples of these statements include:
+			* Update: INSERT, DELETE, UPDATE
+			* Retrieval: SELECT
+				INSERT INTO STUDENTS
+				VALUES('Noob', 'Master', '777425589');
+
+
+
+
+
+
+
+
+Post:
+
+
+
+
+Discuss how the definitions of 2NF and 3NF based on primary keys differ from the general definitions of 2NF and 3NF.
+By primary keys:
+2NF is described as both 1NF and non-prime attributes being fully functionally dependent on the primary key
+3NF is described as both 2NF and no non-prime attribute is transitively dependent on the primary key
+By general definitions: 
+2NF is described as containing no partially dependent attributes on any key in the relation
+3NF is described as every non-prime attribute of R containing fully functional dependency on any key of R as well as non-transitivity dependency on any key of R
+We can see that the main difference is how the attributes relate to the primary key as well as other attributes.
+In 2NF, we can see that the primary key definition focuses on how the attributes must fully depend on all attributes of the key. The general definition is broader, seeing that there is still no partially dependent attributes.
+In 3NF, we can see that the primary key definition focuses on transitivity in relation to the primary key. The general definition is more specific, given two conditions that basically set up 2NF and the primary key portion of 3NF.
+
+
+An example of the 2NF definitions would be as such:
+
+	Relation: {_A_, _B_, C, D}
+
+	FD: (A,B --> C); (A --> D)
+
+	Non-2NF for Primary: This is not in 2NF as NOT every non-prime attribute is fully functionally dependent on the primary key.
+
+	Non-2NF for General: This is not in 2NF as there is a non-key attribute (D) in the relation that IS partially dependent on a key in R (A).
+
+
+
+An example of the 3NF definitions would be as such:
+
+	Relation: {_A_, _B_, C, D}
+
+	FD: (A,B --> C, D); (C --> D)
+
+	Non-3NF for Primary: This is not in 3NF as there IS a non-prime attribute that is also transitively dependent on the primary key.
+
+	Non-3NF for General: This is not in 3NF as though every non-prime attribute has a fully functional dependency on any key of R, there is a transitive dependency on a key.
+
+
+
+
+
+                  2. Discuss what are the two major components of SQL and what function do they serve? 
+
+
+
+The two main components are the Data Definition Language (DDL) as well as the Data Manipulation Language (DML).
+DDL includes statements to define the data or database
+Examples of these statements include CREATE TABLE, DROP TABLE, ALTER TABLE, and RENAME TABLE
+			CREATE TABLE STUDENTS(
+
+				FNAME	VARCHAR (15)
+
+				LNAME	VARCHAR	(15)
+
+				MAJOR	VARCHAR	(15)
+
+				ID	CHAR	(10) );
+
+
+
+DML includes statements to manipulate the data
+Examples of these statements include:
+Update: INSERT, DELETE, UPDATE
+Retrieval: SELECT
+				INSERT INTO STUDENTS
+
+				VALUES('Noob', 'Master', '777425589');
+
+
+
+
+

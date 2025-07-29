@@ -1,0 +1,16 @@
+"Daney Gokey",1234
+"Freddie Mercury",1376
+"Robert Plant",1528
+"Gordan Ramsey",1564
+"John Lennon",2871
+"Paul McCartney",4369
+"Axl Rose",4736
+"Glenn Frey",4908
+"Louis Armstrong",5091
+"Michael Jackson",5102
+"Whitney Houston",5217
+"John Lennon",7247
+"Steve Parry",7623
+"Kurt Cobain",7834
+"Thom Yorke",9650
+"Liam Gallagher",9845

@@ -1,0 +1,44 @@
+1. Discuss the correspondence between the ER model constructs and the relational model constructs. 
+
+
+
+The Entity Relationship (ER) model allows us to get a conceptual overview of the database. We can see the entities, their attributes, and their relationships. The Enhanced Entity Relationship (EER) model adds the objected-oriented topics of super-classes and subclasses, alongside inheritance and union.
+
+Converting these conceptual diagrams into relational models takes a more semantic approach. As relational models are composed of relations and attributes, the main focus is converting the entities and their respective relations and attributes into meaningful relations.
+
+
+
+
+
+
+
+2. Show how each ER model construct can be mapped to the relational model. 
+
+
+
+There are a variety of rules that summarize how mapping is meant to be. I will give a general overview with a few examples.
+
+
+
+Entities become relations, with all of their respective attributes in the ER model becoming the attributes in the Relational model. Any primary key can be chosen (choose wisely!).
+
+	Ex: Player will become a relation. The primary key will be Jersey_#, and the rest will become attributes
+
+
+
+Since there are plenty of Binary 1:N relationships, they can become foreign keys (that's why we needed to choose good primary keys)
+
+	Ex: The Prize Pool from the Leagues Entity will become a foreign key referencing Clubs (if they had an attribute that was money-based).
+
+
+
+Relationships can become their own relations. They will have composite keys composed of their own attributes and the primary keys of what they are connecting.
+
+	Ex: Transfer will become a relation with a composite key consisting of the Jersey # of the player (probably not good since they may change number), the Club name, and maybe even their salary.
+
+
+
+Though this does not include all the niche portions, this begins a general overview of how an ER model can be translated into a relational model.
+
+Edit to the image: The Transfer relationship is meant to have one attribute labeled "Transfer Date" and another labeled "Transfer Fee".
+

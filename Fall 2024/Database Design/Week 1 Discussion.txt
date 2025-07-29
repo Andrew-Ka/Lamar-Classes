@@ -1,0 +1,53 @@
+Discuss the differences between database systems and information retrieval systems. (CLO 1, W1LO1) 
+
+	- From the basics, we can tell the difference between data that comprises a database and information. Data is "raw facts", whereas information is the meaning of such. 
+	- Databases store data in a structured and organized way. Storage, retrieval, addition, deletion, and modification of data are all doable actions in databases systems, allowing complex relations to be made with efficiency in a short time. Common database systems include the likes of MongoDB, Oracle, DynamoDB, and even Microsoft Access.
+	- Information retrieval systems are primarily different in that their data is unstructured. Finding information in an unstructured data source does not use the common methods seen in databases. Some functionalities of database systems may carry over, such as storage and retrieval, but other functions such as deletion, addition, and modification may be uncommon or unavailable. The focus of such systems is fundamentally different, focusing more on ranking query results rather than just outputting raw data. Common retrieval systems include all the giant search engines like Google, Yahoo, and Bing, or even desktop searches (searching through your files), or some current AI models.
+
+
+
+
+What are the different types of database users? Discuss the main activities of each. (CLO 4, W1LO3)
+
+	- Database Administrators: monitor the database's use, gets software and hardware needed, authorizes access to the database; database administrators are common positions seen in companies such as Oracle, Facebook, Amazon and much more.
+	- Database Designers: gets the type of data to be stored, chooses appropriate structures for the data, offers requirements for data to be stored in the database (necessary fields, etc.); database designers accomplish their tasks prior to the database being used, so they are commonly dealt a variety of responsibilities, so job titles usually lie with that of admins, modelers, and developers, with jobs positioned at similar companies listed before.
+	- End Users: there are a variety of types of end users, but database's are made for the user's use, in which they input, query, update, or even generate reports based on the database.
+		- Casual End Users: some browsers or even managers (high/middle level) who occasionally access the database for certain information.
+		- Naive/Parametric End Users: these are the majority of users, who mainly update and query the database, commonly using "canned transactions" (carefully controlled and tested transactions); examples for this include banking apps when withdrawing money or checking account balances, or reserving flight tickets/hotel rooms.
+		- Sophisticated End Users: minor group of individuals who focus on using the data provided in the database, usually with high level access to the database
+		- Standalone Users: personalized use of personalized databases; an example of this would be a recovery software that utilizes an individual's system to attempt to recreate any lost memory by storing what is available in a pre-made database that is updated to help recover what may have been lost (and can be found in certain locations of memory, like using the FAT table).
+	- System Analysts and Application Programmers: seek what is needed by the end users and apply that knowledge with what is available in the database to create software that allows easy access and functionality; specific job titles associated with this role include Software Engineers, Software Developers, and Application Programmers, with their main mission being to "test, debug, document and maintain [] canned transactions".
+
+
+
+
+--Turned In--
+
+Discuss the differences between database systems and information retrieval systems. (CLO 1, W1LO1) 
+
+
+
+From the basics, we can tell the difference between data that comprises a database and information. Data is "raw facts", whereas information is the meaning of such. 
+Databases store data in a structured and organized way. Storage, retrieval, addition, deletion, and modification of data are all doable actions in database systems, allowing complex relations to be made with efficiency in a short time. Common database systems include the likes of MongoDB, Oracle, DynamoDB, and even Microsoft Access.
+Information retrieval systems are primarily different in that their data is unstructured. Finding information in an unstructured data source does not use the common methods seen in databases. Some functionalities of database systems may carry over, such as storage and retrieval, but other functions such as deletion, addition, and modification may be uncommon or unavailable. The focus of such systems is fundamentally different, focusing more on ranking query results rather than just outputting raw data. Common retrieval systems include all the giant search engines like Google, Yahoo, and Bing, or even desktop searches (searching through your files), or some current AI models.
+
+
+
+
+
+
+
+
+What are the different types of database users? Discuss the main activities of each. (CLO 4, W1LO3)
+
+
+
+Database Administrators: monitor the database's use, get software and hardware needed, and authorize access to the database; database administrators are common positions seen in companies such as Oracle, Facebook, Amazon, and many more.
+Database Designers: get the type of data to be stored, choose appropriate structures for the data, offer requirements for data to be stored in the database (necessary fields, etc.); database designers accomplish their tasks prior to the database being used, so they are commonly dealt a variety of responsibilities, so job titles usually lie with that of admins, modelers, and developers, with jobs positioned at similar companies listed before.
+End Users: there are a variety of types of end users, but databases are made for the user's use, in which they input, query, update, or even generate reports based on the database.
+Casual End Users: some browsers or even managers (high/middle level) who occasionally access the database for certain information.
+Naive/Parametric End Users: these are the majority of users, who mainly update and query the database, commonly using "canned transactions" (carefully controlled and tested transactions); examples for this include banking apps when withdrawing money or checking account balances, or reserving flight tickets/hotel rooms.
+Sophisticated End Users: a minor group of individuals who focus on using the data provided in the database, usually with high-level access to the database
+Standalone Users: personalized use of personalized databases; an example of this would be a recovery software that utilizes an individual's system to attempt to recreate any lost memory by storing what is available in a pre-made database that is updated to help recover what may have been lost (and can be found in certain locations of memory, like using the FAT table).
+System Analysts and Application Programmers: seek what is needed by the end users and apply that knowledge with what is available in the database to create software that allows easy access and functionality; specific job titles associated with this role include Software Engineers, Software Developers, and Application Programmers, with their main mission being to "test, debug, document and maintain [ ] canned transactions" (textbook).
+

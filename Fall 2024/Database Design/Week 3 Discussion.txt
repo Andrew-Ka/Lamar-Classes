@@ -1,0 +1,27 @@
+Please respond to queries below:
+
+1. Discuss the differences between the candidate keys and the primary key of a relation. (CLO3, W3LO1) 
+
+	A key attribute uniquely identifies a tuple in a relation. What this means is that the chosen attribute has a different value for each tuple.
+	Each attribute that has this feature is a candidate key. These candidate keys are chosen from the super key.
+	One of these candidate keys is selected as the primary key. This key is also a minimal super key.
+	
+Good resource: https://unstop.com/blog/difference-between-primary-key-and-candidate-key
+
+
+2. How do foreign keys of relations relate to candidate keys, and the relation is used to maintain the integrity of databases (CLO6, W3LO2) 
+
+	Foreign keys are attributes that have the same domain as the primary key of another (or its own) schema.
+	Candidate keys are characterized by being attributes that have a unique value for each tuple in a relation.
+	Since foreign keys are used to draw relations between different schemas, you do not want overlapping data in these relations. Therefore, foreign keys (in well-made databases) are candidate keys. This maintains the integrity of the database as key, domain, entity, and referential integrity.
+
+
+
+3. Provide examples to illustrate your answer.  
+
+	The example in the image is of an advisor with top-level access to school information, student information, and other material. As shown, foreign keys are those that are first candidate keys. There is most likely overlap in names, addresses (siblings), graduation dates, and genders, which is why none of those fields are used as either candidate keys, foreign keys, or primary keys (the underlined cell in each schema). There is no overlap in emails, SSNs, and for very specific GPAs (used to calculate the student's class rank).
+
+
+
+
+Please post your initial response by 23:59 CST Friday 09/06/24 of this week, and comment on the posts of two classmates by 23:59 CST on the due date on Sunday 09/08/24.
