@@ -1,0 +1,75 @@
+make an array public "forwardingTable"; //n x 4 array
+	//****USING STRING ARRAY, will cast ints every time except for column 3
+	//column 1: vertex #
+	//column 2: found  (0 = false, not found)
+	//column 3: cost, inf is for infinity, method for check infinity
+	//column 4: path
+	//n is number of vertex's
+
+int[][] Dijkstra(graph, startNode){
+	for(i -> n){ //initialize
+		[i][1] = i;
+		[i][2] = 0;
+		if(i == startNode){
+			[i][3] = 0; //cost for starting node is 0
+			[i][4] = 0; //path is itself
+		}else{
+			[i][3] = -1; //-1 meaning infinity, must add checker later
+			[i][4] = -1; //path is undefined
+		}
+		
+	}
+
+
+	min; //min cost starts at startNode
+*	while( [n][2] contains 0){ //node not found
+		update column 2 to 1; //found
+		update neighbors by updateNeigh method; //update neighbors
+		reset min = updateMin(forwardingTable);
+	}
+
+
+
+	int[n][2] returnArray; //trevor said it
+	while(i -> n){
+		[i][1] = i;
+		[i][2] = forwardingTable[i][4];
+	}
+	return returnArray;
+
+}
+void updateNeigh(forwardingTable, graph, currentNode){
+	//updates neighbor cost and path
+	for(i ->n){ //n is amount of vertexes in graph
+		if(graph[currentNode][i] != -1){
+			int j = forwardingTable[currentNode][3] + graph[currentNode][i];
+			if(j < forwardingTable[i][3]){
+				forwardingTable[i][3] = j;
+				forwardingTable[i][4] = currentNode;
+			}
+		}
+	}
+}
+
+int updateMin(forwardingTable){
+	go thru column 2 to see what was not found;
+	check minimum;
+}
+
+
+                 A    B   C   D   E    F
+                {0,   2,  5,  1, -1,  -1}, //A
+                {2,   0,  3,  2, -1,  -1}, //B
+                {5,   3,  0,  3,  1,   5}, //C
+                {1,   2,  3,  0,  1,  -1}, //D
+                {-1, -1,  1,  1,  0,   2}, //E
+                {-1, -1,  5, -1,  2,   0}  //F
+
+//just walking backward method, not using full path method
+{1, 0}
+{2, 5}
+{3, 2}
+{4, 2}
+{5, 1}
+
+

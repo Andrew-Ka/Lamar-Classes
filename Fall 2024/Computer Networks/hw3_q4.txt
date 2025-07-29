@@ -1,0 +1,10 @@
+Method:
+	Wait for a packet to be ready;
+	Send RTS to destination node;
+	While(RTS collision){
+		Choose q out of range from 0 to x;
+		Delay for q microseconds:
+		Resend RTS;
+	}
+	Wait for CTS from destination node;
+	Attempt to transmit packet;
