@@ -1,0 +1,18 @@
+//State Purpose
+"Welcome to Honest Burger!"
+"How much did your food cost?"
+
+//Get user input
+User Input --> FoodCost
+
+//tip calculation
+Tip = FoodCost * 0.18
+
+//tax cost
+Tax = FoodCost * 0.07
+
+//output results
+"Your food cost " FoodCost
+"Your tip costs" Tip
+"Your tax costs" Tax 
+"Your total cost is" (FoodCost + Tip + Tax)

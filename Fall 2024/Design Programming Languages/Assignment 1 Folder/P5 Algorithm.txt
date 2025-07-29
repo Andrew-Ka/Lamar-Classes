@@ -1,0 +1,24 @@
+//State Purpose
+"I can compare which of your "
+"2 rectangles are bigger"
+
+//user input
+//Rectangle 1 dimensions:
+User Input --> Rectangle 1 length 
+User Input --> Rectangle 1 width
+//Rectangle 2 dimensions:
+User Input --> Rectangle 2 length
+User Input --> Rectangle 2 width
+
+//Calculations for area
+Area1 = Rectangle 1 length * Rectangle 1 width
+Area2 = Rectangle 2 length * Rectangle 2 width
+
+//Print output
+"Rectangle 1 has an area of " Area1
+"Rectangle 2 has an area of " Area2
+if (Area1 > Area2){
+    "Rectangle 1 is bigger"
+}else{
+    "Rectangle 2 is bigger"
+}

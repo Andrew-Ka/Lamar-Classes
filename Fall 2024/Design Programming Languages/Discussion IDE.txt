@@ -1,0 +1,57 @@
+Part 1:
+
+Identify 2-4 Integrated Development Environments (IDEs) and 2-4 online debuggers or interpreters or
+both. Among these, choose one IDE (e.g., Python) and one online debugger (e.g., https://www.onlinegdb.com/). For detailed python installation instructions, refer to the website and video:
+
+
+	a. IDE & Compilers:
+		i. 	IntelliJ: https://www.jetbrains.com/idea/
+		ii.	Eclipse: https://eclipseide.org/
+		iii.	NetBeans: https://netbeans.apache.org/front/main/index.html
+		iv.	Visual Studio: https://visualstudio.microsoft.com/
+		v.	PyCharm: https://www.jetbrains.com/pycharm/
+		vi.	RubyMine: https://www.jetbrains.com/ruby/
+	b. 	Online Debuggers:
+		vii.	JS Bin: https://jsbin.com/?html,output
+		viii.	WriteCodeOnline: https://www.writephponline.com/
+		ix.	IDEOne: https://ideone.com/
+		x.	CodeSandBox: https://codesandbox.io/
+		xi.	Online GDB: https://www.onlinegdb.com/
+	c. chosen 2:
+		xii.	IDE: VSCode
+		xiii.	Online Debugger: CodeSandBox
+
+
+
+
+2. Explain why you are interested in these two platforms. What are the key features they offer?
+
+	a. VSCode: a versatile code editor that can easily be used for almost any coding language. It is commonly mistaken with Visual Studio (purple), though VSCode (blue) is more lightweight and is not a comprehensive IDE like Visual Studio. The real power of VSCode lies in the extension that mimic the use case of the IDE's necessary to run code. Alongside that, the customizability of the software is very attractive to intermediate and expert coders. 
+	b. CodeSandBox: Utilizing other machines to run machine-expensive tasks is the name of this game. Though I would probably run my low level code on common platforms (like OnlineGDB), CodeSandBox utilizes specific system requirements not typically found on personal systems to run code faster and more efficient. The additional usecases include using their online debugging sandbox to play around with code and experiment prior to releases of big updates.
+
+
+
+3. Using one or both of the chosen platforms, import some data and perform basic analysis. Write 4-8 lines of code with proper comments, using descriptive variable names, based on the imported data. Provide a brief explanation of the code and data.
+
+	* This program takes in values and data given the watch_data.csv file. A simple average is taken of the prices of the watches, though this is modifiable to get an analysis of watch data as needed (mostly utilizing the pandas library).
+
+
+
+
+Part 2:
+
+Propose four project ideas related to the course, each with a brief outline.
+
+Chossing or derived from the syllabus, here are my four proposed projects:
+
+	7. Syntax Highlighter: Custom Syntax Highlighter for a Programming Language: Create a syntax highlighter for a specific programming language or domain-specific language (DSL) using regular expressions or language-specific parsing techniques.
+	21. Language Learning Tool: Interactive Language Learning Platform: Create an interactive platform for learning programming languages, featuring tutorials, exercises, and quizzes.
+	Derived. AI Anki Generator: Using my own machine learning model, I want to create a free AI tool to help make Anki cards.
+	24. Code Metrics: Measure Code Quality and Complexity: Implement a tool that measures code quality and complexity metrics, such as cyclomatic complexity, code churn, and maintainability index.
+	
+
+
+Select one project and prepare a detailed proposal, including your methodology, tools, and expected outcomes. 
+	I have chose to create the AI Anki Generator. Using a mixture of Google Colab and Jupyter Notebook, I will attempt to use python to create the machine learning model. I will host and train the model on HuggingFace. The method I will use will pertain to create an Anki deck from specified sources and training the model to create such cards as good or better than the one's I have created. The outcome should be an easy extension that is AI based to help students easily create Anki decks.
+
+

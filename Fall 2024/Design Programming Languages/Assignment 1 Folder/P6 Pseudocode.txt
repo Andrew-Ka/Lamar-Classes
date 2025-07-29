@@ -1,0 +1,77 @@
+//State Purpose
+"I can want to convert your numbers "
+"into something you can understand"
+
+//user input
+//get's to choose which input's
+Blood Pressure = input()
+Heart Rate = input()
+systole = int(Heart Rate.string(before the /))
+diastole = int(Heart Rate.string(after the /))
+Age = input()
+
+
+
+//Calculations
+Stroke Volume = (systole - diastole) / (systole + diastole)
+Cardia Output = Stroke Volume * Heart Rate 
+
+if (age<){
+    if(blood pressure <){
+        outside, low
+    }else if(blood pressure <){
+        inside
+    }else{
+        outside, high
+    }
+
+
+    if(stroke volume <){
+        outside, low
+    }else if(stroke volume <){
+        inside
+    }else{
+        outside, high
+    }
+}else if (age<){
+    if(blood pressure <){
+        outside, low
+    }else if(blood pressure <){
+        inside
+    }else{
+        outside, high
+    }
+
+
+    if(stroke volume <){
+        outside, low
+    }else if(stroke volume <){
+        inside
+    }else{
+        outside, high
+    }
+}else{
+    if(blood pressure <){
+        outside, low
+    }else if(blood pressure <){
+        inside
+    }else{
+        outside, high
+    }
+
+
+    if(stroke volume <){
+        outside, low
+    }else if(stroke volume <){
+        inside
+    }else{
+        outside, high
+    }
+}
+
+
+//Print output
+print("for your age, you have a heart rate " outside/inside " of the normal range for your age")
+print("for your age, you have a blood pressure " outside/inside " of the normal range for your age")
+print("Symptoms you may have include" symptoms)
+print("Links you may want to check out:" links)

@@ -1,0 +1,10 @@
+//Get user input
+"Enter projected total sales"
+User Input  --> TotSales
+//Store user input
+Profit = TotSales * 0.23
+//Calculate
+"Your profit is $" Profit
+//Output
+
+

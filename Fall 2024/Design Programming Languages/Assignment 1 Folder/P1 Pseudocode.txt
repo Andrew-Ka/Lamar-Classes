@@ -1,0 +1,12 @@
+start
+//Get User Input
+print("Enter projected total sales")
+
+double totSales = double(input)
+
+//Calculations
+double profit = totSales * 0.23
+
+//Output
+print("Your profit is $" + Profit)
+end

@@ -1,0 +1,26 @@
+start
+//State Purpose
+print("I can compare which of your ")
+print("2 rectangles are bigger")
+
+//user input
+//Rectangle 1 dimensions:
+Rectangle1Length = input() 
+Rectangle1Width = input()
+//Rectangle 2 dimensions:
+Rectangle2Length = input()
+Rectangle2Width = input()
+
+//Calculations for area
+double Area1 = Rectangle1length * Rectangle1width
+double Area2 = Rectangle2length * Rectangle2width
+
+//Print output
+print("Rectangle 1 has an area of ", Area1)
+print("Rectangle 2 has an area of ", Area2)
+if (Area1 > Area2){
+    print("Rectangle 1 is bigger")
+}else{
+    print("Rectangle 2 is bigger")
+}
+end

@@ -1,0 +1,33 @@
+//State Purpose
+"I can want to convert your numbers "
+"into something you can understand"
+
+//user input
+//get's to choose which input's
+User Input --> Blood Pressure
+User Input --> Heart Rate (systole / diastole)
+User Input --> Age
+
+
+
+//Calculations
+Stroke Volume = (systole - diastole) / (systole + diastole)
+Cardia Output = Stroke Volume * Heart Rate 
+
+if (age<){
+    check blood Pressure
+    check hear rate
+}else if (age<){
+    check blood Pressure
+    check hear rate
+}else{
+    check blood Pressure
+    check hear rate
+}
+
+
+//Print output
+"for your age, you have a" good/bad heart rate
+"for your age, you have a" good/bad blood pressure
+"Symptoms you may have include" symptoms 
+"Links you may want to check out:" links 

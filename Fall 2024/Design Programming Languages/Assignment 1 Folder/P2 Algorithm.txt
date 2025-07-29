@@ -1,0 +1,22 @@
+//State Purpose
+"Hello Customer, Ready for Checkout?"
+"Enter Your 5 Item Prices Below"
+
+//Go Through for loop and take in input
+//add each to a sum variable
+sum
+for(i --> 5){
+    "Item " i = User Input
+    sum += input
+}
+//add a variable called subtotal for the 
+//total before tax
+subtotal = sum
+
+//add tax, add var called total
+total = subtotal * 1.07
+
+//Print the results
+"Subtotal = " subtotal
+"Total = " total
+

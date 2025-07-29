@@ -1,0 +1,12 @@
+//State Purpose
+"Give me a temperature in Celsius, "
+"I'll give it to you in Fahrenheit"
+
+//User Input
+User Input --> Celsius
+
+//conversion
+Fahrenheit = (9 * Celsius / 5) + 32
+
+//output
+Celsius "Celsius is " Fahrenheit "Fahrenheit" 

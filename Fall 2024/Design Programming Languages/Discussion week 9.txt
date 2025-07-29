@@ -1,0 +1,32 @@
+Part 1: Project Description
+In your individual course project, you are required to articulate a specific design issue or innovation in programming languages. Your submission should include the following components:
+
+Diagram: Create a visual representation of the language design process, highlighting key components such as syntax, semantics, and pragmatics, along with their interrelationships.
+
+Questions: Formulate at least three questions that emerge from your chosen topic. These questions should guide your analysis and solution development:
+	1. How can I utilize current API's to make more usable systems in Anki?
+	2. What is most needed in creating and using Anki decks?
+	3. With the time allotted, what can I currently make and what is a future/long-term project?
+	
+
+Methodology: Provide an outline of the methodology you will adopt to address the problem. This may include comparative analysis, user studies, or case studies of existing languages.
+	Utilizing comparative analysis on what currently exists in terms of Anki support as well as understanding what users need fully will be my guiding method in development. Comparative analysis will mainly consist of searching through what is available, especially at a low or free cost (as my development will be). Understanding needs of the user will include asking current users what can be improved in Anki and what they would like to see as features. 
+
+Expected Outcomes: Articulate your goals for the project, considering both the short-term and long-term impacts on developers and the programming community.
+	I expect to make an application that brings the U/I of Anki (desktop) to an easy-to-use chrome based extension. In the short-term (most likely by this semester), the basics of Anki should be integrated. In the long-term, I desire to create and support the use of AI to help build decks natively and perhaps even parse the internet for pre-made decks and cards that are more relevant to the user.
+
+
+
+Part 2: Problem-Solving Implementation
+To effectively address the design issue outlined in Part 1, you will need to propose a practical solution or prototype. This may include:
+
+Code: Write a minimum of 20 lines of code that illustrate your proposed design principles or features in a new or existing programming language. This code should reflect advanced concepts relevant to language design.
+	API's I must integrate into my JS folder (to handle card requests) can be found here: https://foosoft.net/projects/anki-connect/
+	
+
+
+Tools: Identify and describe at least 2-4 tools or frameworks you will utilize to support your project. These may include programming language design environments, compilers, or code analysis tools. Be sure to include relevant screenshots.
+	I intend on using VS Code for the bulk of the project. Due to its lightweight yet powerful structure, I can utilize this for creating HTML, CSS, and JS files as needed. 
+	Alongside this, I intend to later use Jupyter Notebooks and HuggingFaceAI for he development of an AI model (future/long-term goal).
+
+

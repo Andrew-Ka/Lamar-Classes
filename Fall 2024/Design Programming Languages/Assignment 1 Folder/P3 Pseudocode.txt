@@ -1,0 +1,20 @@
+start
+//State Purpose
+print("Welcome to Honest Burger!")
+print("How much did your food cost?")
+
+//Get user input
+foodCost = input()
+
+//tip calculation
+tip = foodCost * 0.18
+
+//tax cost
+tax = foodCost * 0.07
+
+//output results
+print("Your food cost ", foodCost)
+print("Your tip costs ", tip)
+print("Your tax costs ", tax )
+print("Your total cost is", (foodCost + tip + tax))
+end

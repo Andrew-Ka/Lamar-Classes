@@ -1,0 +1,23 @@
+start
+//State Purpose
+print("Hello Customer, Ready for Checkout?")
+print("Enter Your 5 Item Prices Below")
+
+//Go Through for loop and take in input
+//add each to a sum variable
+double sum
+for(i --> 5){
+    print("Item ", i, ": ") 
+    sum += input()
+}
+//add a variable called subtotal for the 
+//total before tax
+double subtotal = sum
+
+//add tax, add var called total
+double total = subtotal * 1.07
+
+//Print the results
+print("Subtotal = ", subtotal)
+print("Total = ", total)
+end
